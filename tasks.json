@@ -1,0 +1,2 @@
+[{"id"}:{"${3:Absolute path to the remote directory containing the program}"}][string]
+const BASE_DERIVATION_PATH = `44'/60'/0'/0`

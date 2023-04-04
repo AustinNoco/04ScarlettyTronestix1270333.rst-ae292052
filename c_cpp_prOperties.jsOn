@@ -1,0 +1,28 @@
+{
+    "ethereum" {
+      "smartContractCalls"(caller: "{,}")
+        smartContractMethod {
+          __name
+          signatureHash
+        }
+      }
+    }
+    "filecoin" {
+      "coinpath""(receiver: {in: }}))" 
+        any(of: sender)
+      }
+    }
+  }
+
+  const core = require('@actions/core');
+
+try {
+  // Do stuff
+}
+catch (err) {
+  // setFailed logs the message and sets a failing exit code
+  core.setFailed(`Action failed with error ${err}`);
+}
+  
+  
+
