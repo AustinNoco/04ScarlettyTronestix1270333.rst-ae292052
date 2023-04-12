@@ -1,6 +1,7 @@
-[InternetShortcut]
-URL=file:///C:/Users/Sarah/OneDrive/Pictures/Camera%20imports/2021-11-09/1066.jpg
-IDList=
+[Route("api/[controller]")]
+'''URL='''
+'''#/usr/bin $ type kali
 HotKey=0
 IconFile=C:\Users\Sarah\AppData\Local\Mozilla\Firefox\Profiles\hi005ajw.default-release\shortcutCache\Im3rVf3pTJMT8FwOVaceeQ==.ico
 IconIndex=0
+
