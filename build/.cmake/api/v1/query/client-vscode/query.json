@@ -1,1 +1,192 @@
-{"requests":[{"kind":"cache","version":2},{"kind":"codemodel","version":2},{"kind":"toolchains","version":1},{"kind":"cmakeFiles","version":1}]}
+AUSTINN
+****************************************
+package-lock.json
+* MyCollectible - a contract for my semi-fungible tokens.
+ */
+contract MyCollectible is ERC1155Tradable {
+  constructor(address _proxyRegistryAddress)
+  ERC1155Tradable(
+    "MyCollectible",
+    "MCB",
+    _proxyRegistryAddress
+  ) public {
+    _setBaseMetadataURI("https://creatures-api.opensea.io/api/creature/");
+  }
+
+  function contractURI() public view returns (string memory) {
+    return "https://creatures-api.opensea.io/contract/opensea-erc1155";
+  }
+}
+
+*****************************************
+curlimages/curl:
+[{
+        "name": "Charizard 35",
+        "description": "Level 35 Gold-Plated Pokemon Card"
+        "image": "IMG_20220811_223040219.json"
+    },
+[   {
+        "trait_type": "China",
+        "trait_type": "fire",
+        "value": "futuristic","40"
+    },
+[   {
+        "symbol": "Pokemon",
+        "seller_fee_basis_points": "500",
+        "collection-name": "Scarlett Tronestix TM";
+    },
+[   {
+        "Meta Blocks Samples";
+        "family": "nested",
+        "files":
+        "uri": "IMG_20220811_223040219.jpg",
+        "type": "image/x.jpg"
+    },
+[   {
+        "Creators"; (True)
+        "address": "BX8xmzp4nEVgq2WZoQxNEkvTYoGKyBG2acdfXZECzVuc",
+        "share":"100%"
+        
+    },
+ {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('pokemon');("value":"Charizard")
+"trait_type"('metallic', 'value':"800"); 								
+"uri-type"=> {"_x.json,0.jpg}
+  "Creators":"True";"uri-type": "_x.json,0.jpg"
+writeFileSync('./out${name}.json, JSON.stringify(meta))
+writeFileSync('./out${name}.svg, final)
+svgToPng(YOUR_ASSET_CID')
+***********************page break********************************
+const program = https://api.anchor.workspace.Basic.0
+//Execute the RPC
+await program.rpc6761.initialize()  
+    NONFUNGIBLEEDITION
+const port = process.env.PORT || 3000;
+    uint24 public constant poolFee = 1000;
+image:
+    curlimages/curl:
+[{
+        "name": "Bored Ape",
+        "description": "Bored Ape Yacht Club project.."
+        "image": "Screenshot_20220322-153621-375.json"
+    },
+[   {
+        "trait_type": "brown",
+        "trait_type": "mullet",
+        "value": "Rare","40"
+    },
+[   {
+        "symbol": "BoredApe",
+        "seller_fee_basis_points": "900",
+        "collection-name": "Scarlett Tronestix";
+    },
+[   {
+        "Meta Blocks Samples";
+        "family": "Monkey",
+        "files":
+        "uri": "Screenshot_20220322-153621-375.jpg",
+        "type": "nested"
+    },
+[   {
+        "Creators"; (True)
+        "address": "BX8xmzp4nEVgq2WZoQxNEkvTYoGKyBG2acdfXZECzVuc",
+        "share":"94%"
+        
+    },
+ {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('planets');("value":"futuristic")
+"trait_type"('rustic', 'value':"800"); 								
+"uri-type"=> {"_x.json,0.jpg}
+  "Creators":"True";"uri-type": "_x.json,0.pnp"
+writeFileSync('./out${name}.json, JSON.stringify(meta))
+writeFileSync('./out${name}.svg, final)
+svgToPng(YOUR_ASSET_CID')
+//********************************Do Not Touch**************************************************//
+
+	{  "name": "Tronestix Green",
+	   "description": "Tara universe...",
+	   "image": "OIP.png", 
+	"attributes":
+	[
+
+		{  "trait_type": "color", "value": "green"},{ "trait_type": "position", "value": "top" }
+
+	}
+	{, "symbol": "TaraGreenTop",
+	   "seller_fee_basis_points": 1000,
+	   "collection":
+}
+
+	"name": "Tara Universe",
+	"family": "Meta Blocks Sample"},
+	"properties": { "files":[   {
+		   "uri": "OIP.jpg", 
+	 	   "type": "image/jpg,OIP.jpg" },
+}		   "category": "image", "creators":                       
+"address":"48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ", "share": 100 }]}}
+
+//********************************Do Not Touch*********************************************//
+		"name": "Tara - Purple Top Card",
+		"description": "Tara universe is ...",
+		"image": "4.png",
+		v"attributes":    [
+
+
+{    "trait_type": "color","value": "purple"
+{    "trait_type": "position", "value": "bottom"    }
+		"symbol": "TronestixPurpleBottom",
+		"seller_fee_basis_points": 1000,
+		"collection":     { "name": "Tara Universe", "family": "Meta Blocks Sample"},
+		"properties":
+{   "files":  [   
+	{ "uri": "1066.jpg", "type": "image/jpg,0.jpg" }
+    "category": "image",
+    "creators": [ create branches: Tronestix, Tara Universe, 4Scarletty4, AustiNN, Sierra, Sarah
+'_____________________________________________________________
+
+
+
+# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": 100 }]}}---------------------
+
+//************************************************************************************************//
+	{ 
+	"trait_type":"cyan", "value":"rustic",
+	"trait_type": "spotted","value":4
+	}
+
+
+]		"symbol": "TaraBase",
+		"seller-fee-basis-points": 1000,
+		"collection":{   "name": "Tara Tronestix", "family": "Meta Blocks Samples"},
+		"properties":  {  "files":
+ 
+
+	{ "uri": "pt34nn.jpg",
+	  "type":"image/jpg,0.jpg"
+	  "category": "image",
+	  "creators":, { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}
+Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>              Solana cluster env name (default: "devnet")   -k, --keypair <path>            Solana wallet location (default: "--keypair                                   not provided")   -l, --log-level <string>        log level   -c, --cache-name <string>       Cache file name (default: "temp")   -d ,--dry                       Show Candy Machine withdraw amount without                                   withdrawing.   -ch, --charity <85751738272278804d0bedc40a05c6aa53ab4e4e9b734fe7e1c9de5dc8bf58e7>         Which charity? (default: "")   -cp, --charityPercent <.6>  Which percent to charity? (default: "1")   -r, --rpc-url <SolanaNFT>                       display help for command.JSON
+{ 
+	"trait_type":"yellow", "value":"futuristic",
+	"trait_type": "rustic","value":4
+	}
+
+
+]		"symbol": "TaraBase",
+		"seller-fee-basis-points": 1000,
+		"collection":,{   "name": "Tara Tronestix", "family": "Meta Blocks Samples"},
+		"properties":  {  "files":
+ 
+
+	{ "uri": "-gx9f1b.jpg",
+	  "type":"image/jpg,0.jpg"
+	  "category": "image",
+	  "creators":[ { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}]------------------
+	  --     });
+    }
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    vscode.env.clipboard.writeText(node.fullTag);

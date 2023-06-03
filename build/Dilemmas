@@ -1,6 +1,5 @@
-#!/usr/bin/env
-#3/bin/bash
-#!/usr/bin '''Mint
+
+#!/local/usr/bin '''bash
 // mului
 // lemmas for sufficiency
 rule A *Int #unsigned(B) => #unsigned(A *Int B)
