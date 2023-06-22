@@ -4,4 +4,58 @@
 HotKey=0
 IconFile=C:\Users\Sarah\AppData\Local\Mozilla\Firefox\Profiles\hi005ajw.default-release\shortcutCache\Im3rVf3pTJMT8FwOVaceeQ==.ico
 IconIndex=0
+const path = require('path');
 
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+};
+ ...
+
+ | Option <img width=200/
+ >| Type <img width=200/> |
+ Default <img width=800/> |
+| ------ | ---- | ------- | ---------- |
+| silent | *Boolean* | false |
+ Suppress logging output |
+ |client | *Object* | undefined |
+ *Ganache only*: [ganache-core options][1]  |
+ | skipFiles | *Array* |
+ '['Migrations.sol']' | array of contracts or folders (with paths expressed Relativeto the 'contracts' directory)
+ that should be skipped when doing instrumentation. |
+ | istanbulReporter | *Array* |
+ '['html', 'lcov', 'text', 'json']' |
+  [Istanbul coverage reporters][2]  |
+  | mocha | *Object* | '{}' | [Mocha options]
+  [3] to merge into existing mocha config. 'grep' and 'invert' are useful for skipping certain tests under covera
+  ge using tags in the test description.|
+  | onServerReady[<sup>*</sup>][14] |
+   *Function* |  | Hook run *after Server 
+   is launched, *before* the tests executeUseful if you need to use the Oraclize
+   bridge or have setup scripts which rely on the server's availability. [More...]
+   [23] |
+   | onCompileComplete[<sup>*</sup>][14]|
+   *Function* | |Hook run *after* compilation on completes, *before* the tests are run. Useful if you have secondary compilation steps or need to 
+   modify built artifacts. [More...][23]|
+   | onIstanbulComplete[<sup>*</sup><[14]
+   *Function*|  | Hook run *after* the Istanbul reports are generated,*before*
+   the ganache server is shut down. Useful if you need to clean resources up. [More...]
+   [23]|
+
+   [<sup>*</sup> Advanced use][14]
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    ...
+  </head>
+  <body>
+    ...
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
+   ## Usage
