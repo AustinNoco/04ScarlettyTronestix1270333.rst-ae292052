@@ -1,46 +1,8 @@
 #include(safemath)
-proxy <my api server>
+proxy <Linode>
 
 import {useStaticJsonRPC } from "./bin";
 import { useStaticJsonRPC } from "./hooks";
-const fs = require("./locals")
-const { ethers } = require("./locals")
-const { ethers } = require("ethers");
-const npmLodash = require('lodash');
-const projModulefromAnotherRepo = require('my-module-from-git');
-const npmLodash = require('lodash');
-const projModulefromAnotherRepo = require('my-module-from-git');
-async load(id) {
-    if (id === wasmHelper.id) {
-      return `export default ${wasmHelper.code}`;
-    }
-
-    if (!id.toLowerCase().endsWith(".wasm")) {
-      return;
-    }
-
-    
-  function mintItem(string memory tokenURI)
-  public
-  returns (uint256)
-{
-  bytes32 uriHash = keccak256(abi.encodePacked(tokenURI));
-
-  //make sure they are only minting something that is marked "forsale"
-  require(forSale[uriHash],"NOT FOR SALE");
-  forSale[uriHash]=false;
-
-  tokenStrength[uriHash] = uint8( (randomResult % 100)+1 );
-  randomResult=0;
-
-  _tokenIds.increment();
-
-  uint256 id = _tokenIds.current();
-  _mint(msg.sender, id);
-  _setTokenURI(id, tokenURI);
-
-  uriToTokenId[uriHash] = id;
-
   return id;
 }
 }
@@ -55,4 +17,34 @@ it('Etch event', async () => {
 }
 )
 
-keyfj4j113k / {% data variables.product.prodname_secret_scanning_caps %}
+keyfj4j113k/
+
+// Create a Route Handler `app/callback/route.js`
+import { NextRequest, NextResponse } from 'next/server';
+import { WorkOS } from '@workos-inc/node';
+
+const workos = new WorkOS(process.env.WORKOS_API_KEY);
+const clientId = process.env.WORKOS_CLIENT_ID;
+
+export async function GET(req: NextRequest) {
+  // The authorization code returned by AuthKit
+  const code = req.nextUrl.searchParams.get('code');
+
+  const { user } = await workos.userManagement.authenticateWithCode({
+    code,
+    clientId,
+  });
+
+  // Use the information in `user` for further business logic.
+
+  // Cleanup params and redirect to homepage
+  const url = req.nextUrl.clone();
+  url.searchParams.delete('code');
+  url.pathname = '/';
+
+  const response = NextResponse.redirect(url);
+
+  return response;
+}
+
+
