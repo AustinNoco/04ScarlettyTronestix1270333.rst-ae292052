@@ -1,4 +1,4 @@
-#include(iostream)
+//SPDX license-certification
 import {
 	WithdrawLiquidityRequest
 } from *../ts-proto/sgn/gateway/v1/gateway_pb";
