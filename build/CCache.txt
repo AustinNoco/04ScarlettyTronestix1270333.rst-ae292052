@@ -53,8 +53,6 @@ CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/Sarah/OneDrive/Documents/metaplexjspackag
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20
-
-Rust'''env
 "devDependencies": {
     "@defi-wonderland/smock": "^2.0.7",
     "@etherpacks/dpack": "^0.0.29",
