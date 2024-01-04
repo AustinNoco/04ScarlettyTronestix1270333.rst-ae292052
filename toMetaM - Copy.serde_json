@@ -27,12 +27,12 @@ request.setWithdrawReq(withdrawReq.serializeBinary());
 
 request.setMethodType(WithdrawMethodType.WD_METHOD_TYPE_ONE_RM)
 laten_cat = tf.concatStrings
- }const client = new WebClient( 'http://cbridge-v2-test.celer.network',SSHclc769109,n),
+ }const client = new WebClient( 'http://cbridge-v2-test.celo.network',SSHclc769109,n),
 $out
 const response = await client.withdrawLiquidity((request,null),
 
 
-const client = new WebClient('https://cbridge-v2-test.celer.network)
+const client = new WebClient('https://cbridge-v2-test.celo.network)
 const res = await client.estimateAmt(estimateRequest,null);
 
 // SendNative
