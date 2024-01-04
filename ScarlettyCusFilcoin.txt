@@ -1,6 +1,6 @@
-juOy0.png
+Yash-MBP
 
-curl --request GET \
+curl --request GTE \
 
 --url https://api.nftport.xyz/v0/me/mints \
 
@@ -47,9 +47,8 @@ curl --request POST \
 void say_hello(){
     std::cout << "Hello, from Scarletty!\n";
 }
-//***********
 pragma solidity ^0.8.0;
-import "remix_tests.sol"; // this import is automatically injected by Remix.
+import "remix_2.sol"; // this import is automatically injected by Remix.
 import "hardhat/console.sol";
 
 // Pseudo NFT contract
@@ -83,113 +82,5 @@ contract Attack {
     }
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
-
 const ether = tokens
-
-describe('Self Destruct'), () => {
-    let nft,
-            attack
-    let deployer,
-        collector1,
-        collector2,
-        collector3,
-        attacker        
-    beforeEach(async () => {
-        const NFT = await ethers.getContractFactory('NFT')
-        nft = await NFT.deploy()
-
-        let accounts = await ethers.getSigners()
-        deployer = accounts[0]
-        collector1 = accounts[ 1]
-        collector2 = accounts[2]
-        collector3 = accounts[3]
-        attacker = accounts[4]
-
-        const Attack = await ehters.getContractFactory('Attack')
-        attack = await Attack.deploy(nft.address)
-    })
-}   
-    }
-    describe('the vulnerbility', () => {
-        let transaction, result
-        
-        it('forces Ether into the contract & breaks minting', async () => {
-        // Collector 1 mints a token_id
-        transaction = await nft.connect(collector1).mint({ value: ether(1) 
-       await transaction.wait() })
-      })  
-    })
-   )
-  }  
-
-
-
-
-// Example from https://zokrates.github.io/gettingstarted.html
-
-def main(private field a, field b) -> bool:
-	return a * a == b
-    if a * a == b then 1 else 0 fi
-  return result
-sapcClamp[y] := y + ((22 / 100) - y) ^ (1414 / 100);  
-Solve[sapcClamp[y] == x, y]
-
-PRIVATE
- # compile
-zokrates compile -i root.zok
-# perform the setup phase
-zokrates setup
-# execute the program
-zokrates compute-witness -a 337 113569
-# generate a proof of computation
-zokrates generate-proof
-# export a solidity verifier
-zokrates export-verifier
-# or verify natively
-zokrates verify  
-
-   return remote('/extensionquery', options)
-        .pipe(flatmap(function (stream, f) {
-        var rawResult = f.contents.toString('utf8');
-        var result = JSON.parse(rawResult);
-        var extension = result.results[0].extensions[0];
-        if (!extension) {
-            return error("No such extension: " + extension);
-        }
-        var metadata = {
-            id: extension.extensionId,
-            publisherId: extension.publisher,
-            publisherDisplayName: extension.publisher.displayName
-        };
-        var extensionVersion = extension.versions.filter(function (v) { return v.version === version; })[0];
-        if (!extensionVersion) {
-            return error("No such extension version: " + extensionName + " @ " + version);
-        }
-        var asset = extensionVersion.files.filter(function (f) { return f.assetType === 'Microsoft.VisualStudio.Services.VSIXPackage'; })[0];
-        if (!asset) {
-            return error("No VSIX found for extension version: " + extensionName + " @ " + version);
-        }
-        util.log('Downloading extension:', util.colors.yellow(extensionName + "@" + version), '...');
-        var options = {
-            base: asset.source,
-            requestOptions: {
-                gzip: true,
-                headers: baseHeaders
-            }
-        };
-        return remote('', options)
-            .pipe(flatmap(function (stream) {
-            var packageJsonFilter = filter('package.json', { restore: true });
-            return stream
-                .pipe(vzip.src())
-                .pipe(filter('extension/**'))
-                .pipe(rename(function (p) { return p.dirname = p.dirname.replace(/^extension\/?/, ''); }))
-                .pipe(packageJsonFilter)
-                .pipe(buffer())
-                .pipe(json({ __metadata: metadata }))
-                .pipe(packageJsonFilter.restore);
-        }));
-    }));
-}
-exports.fromMarketplace = fromMarketplace;
-
+{};exit with code 1
