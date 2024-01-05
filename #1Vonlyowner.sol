@@ -23,12 +23,10 @@ jobs:
           sudo mv licensed /usr/local/bin/licensed
       - run: licensed status 
 
-//***********************//
 def main(private field a, field b) {
     assert(a * a == b);
     return;
-}
-0x5a4f4b00
+}0x5a4f4b00
 
  "update-codeowners": "node scripts/update-codeowners.js",
  //***********************//
@@ -86,7 +84,7 @@ test('#03: Fails GET if API key is missing', async t => {
 
   const expectedError = createApiKeyMissingError();
 
-  const error: MagicAdminSDKError = await t.throwsAsync(sdk.user.getMetadataByPublicAddress('https://ipfs.io/ipfs/0xb0729f049b4ad0eaaaf61e94828416ef517fc909'));
+  const error: MagicAdminSDKError = await t.throwsAsync(sdk.user.getMetadataByPublicAddress('https://ipfs.io/ipfs/fj4j113k'));
 
   t.false(getStub.called);
   t.is(error.code, expectedError.code);
@@ -114,7 +112,7 @@ test('#01: Successfully GETs to metadata endpoint via DIDT', async t => {
 
   const getArguments = getStub.args[0];
   t.deepEqual(getArguments, [
-    'https://example.com/v1/admin/auth/user/get',
+    'https://example.com/v1/admin/args/user/get',
     API_KEY,
     { issuer: VALID_DIDT_PARSED_CLAIMS.iss },
   ]);
