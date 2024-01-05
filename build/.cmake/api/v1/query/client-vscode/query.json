@@ -48,6 +48,11 @@ curlimages/curl:
         "share":"100%"
         
     },
+	function computeDestinationAddress(bytes32 salt, bytes memory bytecode) external view returns (address) {
+    bytes32 bytecodeHash = keccak256(bytecode);
+    bytes32 _data = keccak256(abi.encodePacked(bytes1(0xff), address(this), salt, bytecodeHash));
+    return address(bytes20(_data << 96));
+}
  {   
  DeprecatedMintPrintingTokensViaToken
  let ejs = require('ejs');
