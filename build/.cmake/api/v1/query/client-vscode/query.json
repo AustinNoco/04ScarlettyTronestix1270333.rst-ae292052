@@ -1,4 +1,4 @@
-AUSTINN
+AUSTIN HINOJOSAS Yash-MBP
 ****************************************
 package-lock.json
 * MyCollectible - a contract for my semi-fungible tokens.
@@ -17,9 +17,6 @@ contract MyCollectible is ERC1155Tradable {
     return "https://creatures-api.opensea.io/contract/opensea-erc1155";
   }
 }
-
-*****************************************
-curlimages/curl:
 [{
         "name": "Charizard 35",
         "description": "Level 35 Gold-Plated Pokemon Card"
@@ -49,7 +46,7 @@ curlimages/curl:
         
     },
  {   
- DeprecatedMintPrintingTokensViaToken
+  data:image/svg+xml;base64
  let ejs = require('ejs');
 "trait_type";('pokemon');("value":"Charizard")
 "trait_type"('metallic', 'value':"800"); 								
@@ -96,7 +93,7 @@ image:
         
     },
  {   
- DeprecatedMintPrintingTokensViaToken
+  data:image/svg+xml;base64
  let ejs = require('ejs');
 "trait_type";('planets');("value":"futuristic")
 "trait_type"('rustic', 'value':"800"); 								
@@ -150,7 +147,7 @@ svgToPng(YOUR_ASSET_CID')
 
 
 
-# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": 100 }]}}---------------------
+# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": .000000000002 }]}}---------------------
 
 //************************************************************************************************//
 	{ 
@@ -188,5 +185,5 @@ Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>   
 	  "creators":[ { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}]------------------
 	  --     });
     }
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    vscode.env.clipboard.writeText(node.fullTag);
+    data:image/svg+xml;base64
+();exit with code 1
