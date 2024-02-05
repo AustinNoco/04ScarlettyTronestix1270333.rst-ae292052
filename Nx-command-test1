@@ -7,7 +7,7 @@ checkFilesExist,
   readJson,	  readJson,
   runCLI,	  runCLI,
   runE2ETests,	  runE2ETests,
-  uniq,	  uniq,
+  uniq,	  uniq,  use  Strict,
   updateFile,	  updateFile,
   updateJson,	
 } from '@nx/e2e/utils';	} from '@nx/e2e/utils';
