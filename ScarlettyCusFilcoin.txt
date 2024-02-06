@@ -1,6 +1,6 @@
 Yash-MBP
 
-curl --request GTE \
+curl --request GET \
 
 --url https://api.nftport.xyz/v0/me/mints \
 
@@ -8,7 +8,7 @@ curl --request GTE \
 
 {
   "response": "OK",
-  "total": 6,
+  "total": 200,
   "minted_nfts":[
 	{
 	"chain": "polygon",
