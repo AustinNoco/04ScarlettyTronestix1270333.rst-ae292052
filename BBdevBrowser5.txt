@@ -1,0 +1,43 @@
+﻿GitHub Checksums - Beta, Dev and Nightly Channels
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQINBGOgswABEADQ5R2pHwmu19Dj7TeBv708hY3xpY6/5IAjJNufob0xj6PMMz0j
+Xm2uWN3Njc3KLfYrgZ6/oic44liCjF0CPT+wX0+Kvp6ZQPlumdU6Fl53+8YP7LYR
+8NQxq+1pkFMn3IsWfOWcEhSJ7ZiVWz/kI2fcjd4KLuialv9AqlIoLDlRJ245EPr7
+z8E7ME0rEZulw1vJhnmBYN6JPPFkEOr3ZFpiKribCnUvx0DMWPPrwj9fUQaYm1AP
+VC/K5o/1CFwjNqKb6V0vkO1Q1tTo/x870ZU0gcMQEwOywvcLyNUGwoW4yf8XMQuA
+5Yc5PAecquqZz+veBCrlpN4C4O2Izyzzxx3rf0SbwkYhPH318dQBLNbb8EzK7bnG
+hBgj371/9P294TnQFcuToH6XZvlcpOglIA3eq1qfQ87RJke481RgVAKq6SeAypTX
+L0YtKRT6j/pv5GYh9p+5chBB+nibFb69gX1BB4TsGrAHRyRpG/lC6N0tJeErM0iX
+x7kRxRtQTqlYgxtwj/YTex1jErHr3lmfcyClWdZ/f+Re3RxHxX1ot71dYZagnzhx
+GImpR515pqWLdtF1tbNcQoJeTfPzw91d0t26xGRbrF/apNFV2LTexp4I47KpwIxq
+8IrEX+Zp33m3JHMCbzvnztKz+jRW/dju+BV1TgCxU12kZXMk38zUCUPk2wARAQAB
+tGFCcmF2ZSBDaGVja3N1bXMgUHJlIFJlbGVhc2UgKEJyYXZlIENoZWNrc3VtcyBQ
+cmUgUmVsZWFzZSkgPGJyYXZlLWNoZWNrc3Vtcy1wcmUtcmVsZWFzZUBicmF2ZS5j
+b20+iQJXBBMBCABBFiEE1IM+gYbjguRFo+F4JGKt/T4k+4UFAmOgswACGwMFCRLM
+AwAFCwkIBwICIgIGFQoJCAsCBBYCAwECHgcCF4AACgkQJGKt/T4k+4U0MQ//Xc2p
+v4P2jCl6o0s9Ru9OAVDgN41/X9k2nS5xaLW0VIB7JIXl7fl6/VywHzEnNI1qiws+
+7D2L2lQTBgGaZQEOMzs0spxyHW0ci8QiICY9xFLF8BgjCIz7uQHgK+JGcRd5Azhp
+9zyl5aUVRbwDHledsE4jSD//7q1ybBoCrKKTCbVFtEgES73fLFEkDLFjLJu9lKek
+PsXv0/lUIsq/91mxDJWFpp+f4ZIvyY9goQ7P3qUmtx3MHc/liASyIfDN8C0EoGPr
+UOFtpu5tBK3XMu6c9L2Qdzm2up1XmVnP81WbbIFiFZrxkW9QBu2Ij+9/BxLgTzzO
+bDhpR0yors1RoxdcvQrS8sCD3pKQ2t89SzKcibb0BUR2Rtu2bYHoifFUscLQ35r2
+m9UZurfKSH0FWVX1doWO0VBLM2Tx+hBM/sGJswT4stQNC6+4yEIsAnaN+ewsRPir
+NexqmvIlk4w6PXd8UaveUFCH8IbGbuk56mzUQkdeA3vcd9mr023F+U1gRJ4xOfhr
+rusXLT73lYSwOX/2zYkWbmXbA9n40IROqIUDtH89u5FkYObRwGV04KVwhyU/trqU
+/A6aCll6ZL9w4YlbSaLrYT6CpJd2qn1iRQEreijtkIwa7p8ZtRyzcn2uRID+ETwK
+x6HCZW9E3uuhv3kq/YxTJT2YIw2LK2xyp8PTqG0=
+=m5XP
+-----END PGP PUBLIC KEY BLOCK-----
+
+ackage Repositories - Release Channel
+ 
+Package Repositories - Beta, Dev and Nightly Channels
+ 
+Windows
+Our Windows binaries are currently being code signed using certificates with the thumbprints below.
+
+This list will change as we regularly rotate our certificates.
+
+8D5AB0D8CAD7C59EE747691E2234C5762EF62683
+8903F2BD47465A4F0F080AA7CEEC31A31B74DE42
