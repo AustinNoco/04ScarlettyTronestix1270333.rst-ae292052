@@ -1,3 +1,12 @@
+import '@radix-ui/themes/styles.css';
+import { Theme, Button } from '@radix-ui/themes'
+
+export default () => (
+  <Theme>
+    <Button>Hey 👋</Button>
+  </Theme>
+)
+;
 import { signIn } from './sign-in';
 
 export default function EmailPasswordExamplePage() {
