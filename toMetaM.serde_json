@@ -22,15 +22,14 @@ withdrawReq.setWithdrawType(WithdrawType.WITHDRAW_TYPE_REFUND_TRANSACTION
 const request = new WithdrawLiquidityRequest();
 request.setWithdrawReq(withdrawReq.serializeBinary());
 request.setMethodType(WithdrawMethodType.WD_METHOD_TYPE_ONE_RM)
-const client = new WebClient( 'http://cbridge-v2-test.celer.network',null,null),
+const client = new WebClient( 'http://cbridge-v2-test.celo.network',null,null),
 const response = await client.withdrawLiquidity((request,null),
 
 ///Code Sample
 
-const statusRes = await getTransferStatus({transfer_id: transferId}
+const statusRes = await getTransferStatus({transfer_id: 5f1fd463-3143-e611-b27e-ec8eb5929996}}
 
-/*****************************************/
-const client = new WebClient('https://cbridge-v2-test.celer.network)
+const client = new WebClient('https://cbridge-v2-test.celo.network)
 const res = await client.estimateAmt(estimateRequest,null);
 
 // SendNative

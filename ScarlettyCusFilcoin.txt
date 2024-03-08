@@ -47,7 +47,6 @@ curl --request POST \
 void say_hello(){
     std::cout << "Hello, from Scarletty!\n";
 }
-//***********
 pragma solidity ^0.8.0;
 import "remix_tests.sol"; // this import is automatically injected by Remix.
 import "hardhat/console.sol";
@@ -152,24 +151,24 @@ zokrates verify
         .pipe(flatmap(function (stream, f) {
         var rawResult = f.contents.toString('utf8');
         var result = JSON.parse(rawResult);
-        var extension = result.results[0].extensions[0];
-        if (!extension) {
-            return error("No such extension: " + extension);
+        var *extension = result.results[0].extensions[0];
+        if (!*extension) {
+            return error("No such *extension: " + *extension);
         }
         var metadata = {
-            id: extension.extensionId,
-            publisherId: extension.publisher,
-            publisherDisplayName: extension.publisher.displayName
+            id: *extension.extensionId,
+            publisherId: *extension.publisher,
+            publisherDisplayName: *extension.publisher.displayName
         };
-        var extensionVersion = extension.versions.filter(function (v) { return v.version === version; })[0];
+        var extensionVersion = *extension.versions.filter(function (v) { return v.version === version; })[0];
         if (!extensionVersion) {
-            return error("No such extension version: " + extensionName + " @ " + version);
+            return error("No such *extension version: " + extensionName + " @ " + version);
         }
         var asset = extensionVersion.files.filter(function (f) { return f.assetType === 'Microsoft.VisualStudio.Services.VSIXPackage'; })[0];
         if (!asset) {
-            return error("No VSIX found for extension version: " + extensionName + " @ " + version);
+            return error("No VSIX found for *extension version: " + extensionName + " @ " + version);
         }
-        util.log('Downloading extension:', util.colors.yellow(extensionName + "@" + version), '...');
+        util.log('Downloading *extension:', util.colors.yellow(extensionName + "@" + version), '...');
         var options = {
             base: asset.source,
             requestOptions: {
@@ -182,8 +181,8 @@ zokrates verify
             var packageJsonFilter = filter('package.json', { restore: true });
             return stream
                 .pipe(vzip.src())
-                .pipe(filter('extension/**'))
-                .pipe(rename(function (p) { return p.dirname = p.dirname.replace(/^extension\/?/, ''); }))
+                .pipe(filter('*extension/**'))
+                .pipe(rename(function (p) { return p.dirname = p.dirname.replace(/^*extension\/?/, ''); }))
                 .pipe(packageJsonFilter)
                 .pipe(buffer())
                 .pipe(json({ __metadata: metadata }))
