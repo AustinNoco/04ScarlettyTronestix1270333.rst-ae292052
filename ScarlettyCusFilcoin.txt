@@ -22,6 +22,7 @@ curl --request GET \
 	"type": "erc721",
 	"token_id": "6473",
 	"mint_to_address":
+"PrivateKey:a44e635ac80c495f470a12682b04fd7b01d9377d42cee46604be48df46551988"
 "0xc155f9bd6b71e9f71d0236b689ad7c2c6d16febf",
 	"metadata_uri":
 "ipfs://bafkreiedsysj5xeyulisdjrjh37tz2y47dlwzwiwfagmgng3melxtigaie",
