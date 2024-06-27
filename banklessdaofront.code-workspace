@@ -1,3 +1,7 @@
+.gitignore
+geoip-*.nft
+dbip.csv
+
 {
 	"folders": [ DontMEVME.sol, PtNFt.py, workosME.ts, workosPPrb.yml ]
 		{
