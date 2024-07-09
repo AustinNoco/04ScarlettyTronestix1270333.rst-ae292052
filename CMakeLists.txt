@@ -1,11 +1,277 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(Scarletty VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.20.0)
+if(NOT DEFINED LLVM_COMMON_CMAKE_UTILS)
+  set(LLVM_COMMON_CMAKE_UTILS ${CMAKE_CURRENT_SOURCE_DIR}/../cmake)
+endif()
+include(${LLVM_COMMON_CMAKE_UTILS}/Modules/CMakePolicy.cmake
+  NO_POLICY_SCOPE)
+# If we are not building as a part of LLVM, build Clang as an
+# standalone project, using LLVM as an external library:
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+  project(Clang)
+  set(CLANG_BUILT_STANDALONE TRUE)
+endif()
 
-include(CTest)
-enable_testing()
+# Must go below project(..)
+include(GNUInstallDirs)
+include(GetDarwinLinkerVersion)
 
+if(CLANG_BUILT_STANDALONE)
+  set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ standard to conform to")
+  set(CMAKE_CXX_STANDARD_REQUIRED YES)
+  set(CMAKE_CXX_EXTENSIONS NO)
+  if(NOT MSVC_IDE)
+    set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS}
+      CACHE BOOL "Enable assertions")
+    # Assertions should follow llvm-config's.
+    mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
+  endif()
+  find_package(LLVM REQUIRED HINTS "${LLVM_CMAKE_DIR}")
+  list(APPEND CMAKE_MODULE_PATH "${LLVM_DIR}")
+  # Turn into CACHE PATHs for overwritting
+  set(LLVM_INCLUDE_DIRS ${LLVM_INCLUDE_DIRS} CACHE PATH "Path to llvm/include and any other header dirs needed")
+  set(LLVM_BINARY_DIR "${LLVM_BINARY_DIR}" CACHE PATH "Path to LLVM build tree")
+  set(LLVM_MAIN_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../llvm" CACHE PATH "Path to LLVM source tree")
+  set(LLVM_TOOLS_BINARY_DIR "${LLVM_TOOLS_BINARY_DIR}" CACHE PATH "Path to llvm/bin")
+  set(LLVM_LIBRARY_DIR "${LLVM_LIBRARY_DIR}" CACHE PATH "Path to llvm/lib")
+  find_program(LLVM_TABLEGEN_EXE "llvm-tblgen" ${LLVM_TOOLS_BINARY_DIR}
+    NO_DEFAULT_PATH)
+  # They are used as destination of target generators.
+  set(LLVM_RUNTIME_OUTPUT_INTDIR ${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}/bin)
+  set(LLVM_LIBRARY_OUTPUT_INTDIR ${CMAKE_BINARY_DIR}/${CMAKE_CFG_INTDIR}/lib${LLVM_LIBDIR_SUFFIX})
+  if(WIN32 OR CYGWIN)
+    # DLL platform -- put DLLs into bin.
+    set(LLVM_SHLIB_OUTPUT_INTDIR ${LLVM_RUNTIME_OUTPUT_INTDIR})
+  else()
+    set(LLVM_SHLIB_OUTPUT_INTDIR ${LLVM_LIBRARY_OUTPUT_INTDIR})
+  endif()
+  option(LLVM_INSTALL_TOOLCHAIN_ONLY
+    "Only include toolchain files in the 'install' target." OFF)
+  option(LLVM_FORCE_USE_OLD_TOOLCHAIN
+    "Set to ON to force using an old, unsupported host toolchain." OFF)
+  option(CLANG_ENABLE_BOOTSTRAP "Generate the clang bootstrap target" OFF)
+  option(LLVM_ENABLE_LIBXML2 "Use libxml2 if available." ON)
+ include(AddLLVM)
+  include(TableGen)
+  include(HandleLLVMOptions)
+  include(VersionFromVCS)
+  include(CheckAtomic)
+  include(GetErrcMessages)
+  include(LLVMDistributionSupport)
+  set(PACKAGE_VERSION "${LLVM_PACKAGE_VERSION}")
+  set(BUG_REPORT_URL "${LLVM_PACKAGE_BUGREPORT}" CACHE STRING
+    "Default URL where bug reports are to be submitted.")
+  if (NOT DEFINED LLVM_INCLUDE_TESTS)
+    set(LLVM_INCLUDE_TESTS ON)
+  endif()
+  include_directories(${LLVM_INCLUDE_DIRS})
+  link_directories("${LLVM_LIBRARY_DIR}")
+  set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
+  set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX} )
+  set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib${LLVM_LIBDIR_SUFFIX} )
+  find_package(Python3 ${LLVM_MINIMUM_PYTHON_VERSION} REQUIRED
+    COMPONENTS Interpreter)
+  if(LLVM_INCLUDE_TESTS)
+    # Check prebuilt llvm/utils.
+    if(EXISTS ${LLVM_TOOLS_BINARY_DIR}/FileCheck${CMAKE_EXECUTABLE_SUFFIX}
+        AND EXISTS ${LLVM_TOOLS_BINARY_DIR}/count${CMAKE_EXECUTABLE_SUFFIX}
+        AND EXISTS ${LLVM_TOOLS_BINARY_DIR}/not${CMAKE_EXECUTABLE_SUFFIX})
+      set(LLVM_UTILS_PROVIDED ON)
+    endif()
+    # Seek installed Lit.
+    find_program(LLVM_LIT
+                 NAMES llvm-lit lit.py lit
+                 PATHS "${LLVM_MAIN_SRC_DIR}/utils/lit"
+                 DOC "Path to lit.py")
+    if(EXISTS ${LLVM_MAIN_SRC_DIR}/utils/lit/lit.py)
+      # Note: path not really used, except for checking if lit was found
+      if(EXISTS ${LLVM_MAIN_SRC_DIR}/utils/llvm-lit)
+        add_subdirectory(${LLVM_MAIN_SRC_DIR}/utils/llvm-lit utils/llvm-lit)
+      endif()
+      if(NOT LLVM_UTILS_PROVIDED)
+        add_subdirectory(${LLVM_MAIN_SRC_DIR}/utils/FileCheck utils/FileCheck)
+        add_subdirectory(${LLVM_MAIN_SRC_DIR}/utils/count utils/count)
+        add_subdirectory(${LLVM_MAIN_SRC_DIR}/utils/not utils/not)
+        set(LLVM_UTILS_PROVIDED ON)
+        set(CLANG_TEST_DEPS FileCheck count not)
+      endif()
+    endif()
+    if (NOT TARGET llvm_gtest)
+        message(FATAL_ERROR "llvm-gtest not found. Please install llvm-gtest or disable tests with -DLLVM_INCLUDE_TESTS=OFF")
+    endif()
+    if(LLVM_LIT)
+    if(LLVM_LIT)
+      # Define the default arguments to use with 'lit', and an option for the user
+      # to override.
+      set(LIT_ARGS_DEFAULT "-sv")
+      if (MSVC OR XCODE)
+        set(LIT_ARGS_DEFAULT "${LIT_ARGS_DEFAULT} --no-progress-bar")
+      endif()
+      set(LLVM_LIT_ARGS "${LIT_ARGS_DEFAULT}" CACHE STRING "Default options for lit")
+      get_errc_messages(LLVM_LIT_ERRC_MESSAGES)
+      # On Win32 hosts, provide an option to specify the path to the GnuWin32 tools.
+      if( WIN32 AND NOT CYGWIN )
+        set(LLVM_LIT_TOOLS_DIR "" CACHE PATH "Path to GnuWin32 tools")
+      endif()
+    else()
+      set(LLVM_INCLUDE_TESTS OFF)
+    endif()
+    umbrella_lit_testsuite_begin(check-all)
+  endif() # LLVM_INCLUDE_TESTS
+endif() # standalone
+# Make sure that our source directory is on the current cmake module path so that
+# we can include cmake files from this directory.
+list(INSERT CMAKE_MODULE_PATH 0
+  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
+  "${LLVM_COMMON_CMAKE_UTILS}/Modules"
+  )
+# This allows disabling clang's XML dependency even if LLVM finds libxml2.
+# By default, clang depends on libxml2 if LLVM does.
+option(CLANG_ENABLE_LIBXML2 "Whether libclang may depend on libxml2"
+       ${LLVM_ENABLE_LIBXML2})
+if(CLANG_ENABLE_LIBXML2)
+  # Don't look for libxml if we're using MSan, since uninstrumented third party
+  # code may call MSan interceptors like strlen, leading to false positives.
+  if(NOT LLVM_USE_SANITIZER MATCHES "Memory.*")
+    set (LIBXML2_FOUND 0)
+    find_package(LibXml2 2.5.3 QUIET)
+    if (LIBXML2_FOUND)
+      set(CLANG_HAVE_LIBXML 1)
+    endif()
+  endif()
+endif()
+include(CheckIncludeFile)
+check_include_file(sys/resource.h CLANG_HAVE_RLIMITS)
+# This check requires _GNU_SOURCE on linux
+check_include_file(dlfcn.h CLANG_HAVE_DLFCN_H)
+if( CLANG_HAVE_DLFCN_H )
+  include(CheckLibraryExists)
+  include(CheckSymbolExists)
+  check_library_exists(dl dlopen "" HAVE_LIBDL)
+  if( HAVE_LIBDL )
+    list(APPEND CMAKE_REQUIRED_LIBRARIES dl)
+  endif()
+  list(APPEND CMAKE_REQUIRED_DEFINITIONS -D_GNU_SOURCE)
+  check_symbol_exists(dladdr dlfcn.h CLANG_HAVE_DLADDR)
+  list(REMOVE_ITEM CMAKE_REQUIRED_DEFINITIONS -D_GNU_SOURCE)
+  if( HAVE_LIBDL )
+    list(REMOVE_ITEM CMAKE_REQUIRED_LIBRARIES dl)
+  endif()
+endif()
+set(CLANG_RESOURCE_DIR "" CACHE STRING
+  "Relative directory from the Clang binary to its resource files.")
+set(C_INCLUDE_DIRS "" CACHE STRING
+  "Colon separated list of directories clang will search for headers.")
+set(USE_DEPRECATED_GCC_INSTALL_PREFIX OFF CACHE BOOL "Temporary workaround before GCC_INSTALL_PREFIX is completely removed")
+set(GCC_INSTALL_PREFIX "" CACHE PATH "Directory where gcc is installed." )
+set(DEFAULT_SYSROOT "" CACHE STRING
+  "Default <path> to all compiler invocations for --sysroot=<path>." )
+if(GCC_INSTALL_PREFIX AND NOT USE_DEPRECATED_GCC_INSTALL_PREFIX)
+  message(FATAL_ERROR "GCC_INSTALL_PREFIX is deprecated and will be removed. Use "
+    "configuration files (https://clang.llvm.org/docs/UsersManual.html#configuration-files)"
+    "to specify the default --gcc-install-dir= or --gcc-triple=. --gcc-toolchain= is discouraged. "
+    "See https://github.com/llvm/llvm-project/pull/77537 for detail.")
+endif()
+set(ENABLE_LINKER_BUILD_ID OFF CACHE BOOL "pass --build-id to ld")
+set(ENABLE_X86_RELAX_RELOCATIONS ON CACHE BOOL
+    "enable x86 relax relocations by default")
+set(PPC_LINUX_DEFAULT_IEEELONGDOUBLE OFF CACHE BOOL
+    "Enable IEEE binary128 as default long double format on PowerPC Linux.")
+set(CLANG_SPAWN_CC1 OFF CACHE BOOL
+    "Whether clang should use a new process for the CC1 invocation")
+option(CLANG_DEFAULT_PIE_ON_LINUX "Default to -fPIE and -pie on linux-gnu" ON)
+set(CLANG_DEFAULT_LINKER "" CACHE STRING
+  "Default linker to use (linker name or absolute path, empty for platform default)")
+set(CLANG_DEFAULT_CXX_STDLIB "" CACHE STRING
+"Default C++ stdlib to use (\"libstdc++\" or \"libc++\", empty for platform default")
+if (NOT(CLANG_DEFAULT_CXX_STDLIB STREQUAL "" OR
+        CLANG_DEFAULT_CXX_STDLIB STREQUAL "libstdc++" OR
+        CLANG_DEFAULT_CXX_STDLIB STREQUAL "libc++"))
+  message(WARNING "Resetting default C++ stdlib to use platform default")
+  set(CLANG_DEFAULT_CXX_STDLIB "" CACHE STRING
+    "Default C++ stdlib to use (\"libstdc++\" or \"libc++\", empty for platform default" FORCE)
+endif()
+set(CLANG_DEFAULT_RTLIB "" CACHE STRING
+  "Default runtime library to use (\"libgcc\" or \"compiler-rt\", empty for platform default)")
+if (NOT(CLANG_DEFAULT_RTLIB STREQUAL "" OR
+        CLANG_DEFAULT_RTLIB STREQUAL "libgcc" OR
+        CLANG_DEFAULT_RTLIB STREQUAL "compiler-rt"))
+  message(WARNING "Resetting default rtlib to use platform default")
+  set(CLANG_DEFAULT_RTLIB "" CACHE STRING
+    "Default runtime library to use (\"libgcc\" or \"compiler-rt\", empty for platform default)" FORCE)
+endif()
+set(CLANG_DEFAULT_UNWINDLIB "" CACHE STRING
+  "Default unwind library to use (\"none\" \"libgcc\" or \"libunwind\", empty to match runtime library.)")
+if (CLANG_DEFAULT_UNWINDLIB STREQUAL "")
+  if (CLANG_DEFAULT_RTLIB STREQUAL "libgcc")
+    set (CLANG_DEFAULT_UNWINDLIB "libgcc" CACHE STRING "" FORCE)
+  endif()
+endif()
+if (NOT(CLANG_DEFAULT_UNWINDLIB STREQUAL "" OR
+        CLANG_DEFAULT_UNWINDLIB STREQUAL "none" OR
+        CLANG_DEFAULT_UNWINDLIB STREQUAL "libgcc" OR
+        CLANG_DEFAULT_UNWINDLIB STREQUAL "libunwind"))
+  message(WARNING "Resetting default unwindlib to use platform default")
+  set(CLANG_DEFAULT_UNWINDLIB "" CACHE STRING
+    "Default unwind library to use (\"none\" \"libgcc\" or \"libunwind\", empty to match runtime library.)" FORCE)
+endif()
+set(CLANG_DEFAULT_OBJCOPY "objcopy" CACHE STRING
+  "Default objcopy executable to use.")
+set(CLANG_DEFAULT_OPENMP_RUNTIME "libomp" CACHE STRING
+  "Default OpenMP runtime used by -fopenmp.")
+set(CLANG_SYSTEMZ_DEFAULT_ARCH "z10" CACHE STRING "SystemZ Default Arch")
+set(CLANG_VENDOR ${PACKAGE_VENDOR} CACHE STRING
+  "Vendor-specific text for showing with version information.")
+set(CLANG_REPOSITORY_STRING "" CACHE STRING
+  "Vendor-specific text for showing the repository the source is taken from.")
+if(CLANG_REPOSITORY_STRING)
+  add_definitions(-DCLANG_REPOSITORY_STRING="${CLANG_REPOSITORY_STRING}")
+endif()
+set(CLANG_VENDOR_UTI "org.llvm.clang" CACHE STRING
+  "Vendor-specific uti.")
+set(CLANG_PYTHON_BINDINGS_VERSIONS "" CACHE STRING
+    "Python versions to install libclang python bindings for")
+set(CLANG_LINK_CLANG_DYLIB ${LLVM_LINK_LLVM_DYLIB} CACHE BOOL
+    "Link tools against libclang-cpp.so")
+if (NOT LLVM_LINK_LLVM_DYLIB AND CLANG_LINK_CLANG_DYLIB)
+  message(FATAL_ERROR "Cannot set CLANG_LINK_CLANG_DYLIB=ON when "
+                      "LLVM_LINK_LLVM_DYLIB=OFF")
+endif()
+# The libdir suffix must exactly match whatever LLVM's configuration used.
+set(CLANG_LIBDIR_SUFFIX "${LLVM_LIBDIR_SUFFIX}")
+set(CLANG_TOOLS_INSTALL_DIR "${CMAKE_INSTALL_BINDIR}" CACHE PATH
+    "Path for binary subdirectory (defaults to '${CMAKE_INSTALL_BINDIR}')")
+mark_as_advanced(CLANG_TOOLS_INSTALL_DIR)
+set(CLANG_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(CLANG_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
+if( CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR AND NOT MSVC_IDE )
+  message(FATAL_ERROR "In-source builds are not allowed. "
+"Please create a directory and run cmake "
+"from there, passing the path to this source directory as the last argument. "
+"This process created the file `CMakeCache.txt' and the directory "
+"`CMakeFiles'. Please delete them.")
+endif()
+# If CLANG_VERSION_* is specified, use it, if not use LLVM_VERSION_*.
+if(NOT DEFINED CLANG_VERSION_MAJOR)
+  set(CLANG_VERSION_MAJOR ${LLVM_VERSION_MAJOR})
+endif()
+if(NOT DEFINED CLANG_VERSION_MINOR)
+  set(CLANG_VERSION_MINOR ${LLVM_VERSION_MINOR})
+endif()
+if(NOT DEFINED CLANG_VERSION_PATCHLEVEL)
+  set(CLANG_VERSION_PATCHLEVEL ${LLVM_VERSION_PATCH})
+endif()
+if(NOT DEFINED CLANG_VERSION_SUFFIX)
+  set(CLANG_VERSION_SUFFIX ${LLVM_VERSION_SUFFIX})
+endif()
+set(CLANG_VERSION "${CLANG_VERSION_MAJOR}.${CLANG_VERSION_MINOR}.${CLANG_VERSION_PATCHLEVEL}${CLANG_VERSION_SUFFIX}")
+	@@ -346,20 +347,7 @@
+# Determine HOST_LINK_VERSION on Darwin.
+set(HOST_LINK_VERSION)
+if (APPLE AND NOT CMAKE_LINKER MATCHES ".*lld.*")
+  get_darwin_linker_version(HOST_LINK_VERSION)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 add_library(Scarletty Scarletty.cpp)
-
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 set(CPACK_PROJECT_NAME ${Cyber_Tronestix})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
