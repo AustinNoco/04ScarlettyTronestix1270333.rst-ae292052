@@ -1,5 +1,5 @@
 #include(safemath)
-proxy <Linode>
+proxy <Laragon>
 
 import {useStaticJsonRPC } from "./bin";
 import { useStaticJsonRPC } from "./hooks";
