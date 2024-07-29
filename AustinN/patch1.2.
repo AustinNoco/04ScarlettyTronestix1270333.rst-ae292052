@@ -1,7 +1,8 @@
+#pragma once
 #include(safemath)
 proxy <Laragon>
 
-import {useStaticJsonRPC } from "./bin";
+import {useStaticJsonRPC } from "./mnt";
 import { useStaticJsonRPC } from "./hooks";
   return id;
 }
@@ -48,9 +49,10 @@ contract Token is Ownable {
     }
 
     // Other token-related functions can be added here
-}
-keyfj4j113k;
-}
+    constructor(_); {
+    }
+        keyfj4j113k;
+    }
 
 it('Etch event', async () => {
     await wait(hh, delay_period)
@@ -61,14 +63,11 @@ it('Etch event', async () => {
     await check_entry(dmap, rootzone.address, b32('zone1'), LOCK, padRight(zone1))
 }
 )
-
-keyfj4j113k/
-
 // Create a Route Handler `app/callback/route.js`
 import { NextRequest, NextResponse } from 'next/server';
 import { WorkOS } from '@workos-inc/node';
 
-const workos = new WorkOS(process.env.WORKOS_API_KEY);
+const workos = new WorkOS(process.env/Ykg4762PFSLnS);
 const clientId = process.env.WORKOS_CLIENT_ID;
 
 export async function GET(req: NextRequest) {
