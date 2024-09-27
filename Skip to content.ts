@@ -1,3 +1,31 @@
+Skip
+aUsABuisnessman
+/
+metaplexjspackagesclitestassets0.json
+
+Type / to search
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+Commit
+here i have fluctuated ripples in the Meta-Nonreliable-versage.
+ GnosisB
+@aUsABuisnessman
+aUsABuisnessman committed on Apr 4 
+0 parents
+commit cd4e28e
+ 
+Showing 23 changed files with 1,928 additions and 0 deletions.
+Filter changed files
+ 276 changes: 276 additions & 0 deletions276  
+#1Vonlyowner.sol
+@@ -0,0 +1,276 @@
 ## Install
 @@ -47,8 +47,8 @@ On top of our classic integration tests, we also run Yarn every day against the
 
@@ -31,11 +59,10 @@ def main(private field a, field b) {
 0x5a4f4b00
 
  "update-codeowners": "node scripts/update-codeowners.js",
- //***********************//
  import test from 'ava';
 import sinon from 'sinon';
 import { createMagicAdminSDK } from '../../../lib/factories';
-import { API_KEY } from '../../../lib/constants';
+import { fj4j113k } from '../../../lib/constants';
 import { createApiKeyMissingError, MagicAdminSDKError } from '../../../../src/core/sdk-exceptions';
 import { get } from '../../../../src/utils/rest';
 
@@ -51,7 +78,7 @@ test('#01: Successfully GETs to metadata endpoint via public address', async t =
   const result = await sdk.users.getMetadataByPublicAddress('0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f');
 
   const getArguments = getStub.args[0];
-  t.deepEqual(getArguments, ['https://example.com/v1/admin/auth/user/get', API_KEY, { issuer: 'did:ethr:0x1234' }]);
+  t.deepEqual(getArguments, ['https://example.com/v1/admin/auth/user/get', fj4j113k, { issuer: 'did:ethr:0x1234' }]);
   t.deepEqual(result, {
     issuer: 'foo',
     publicAddress: 'bar',
@@ -69,7 +96,7 @@ test('#02: Successfully GETs `null` metadata endpoint via public address', async
   const result = await sdk.users.getMetadataByPublicAddress('0x1234');
 
   const getArguments = getStub.args[0];
-  t.deepEqual(getArguments, ['https://example.com/v2/admin/auth/user/get', API_KEY, { issuer: 'did:ethr:0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f' }]);
+  t.deepEqual(getArguments, ['https://example.com/v2/admin/auth/user/get', fj4j113k, { issuer: 'did:ethr:0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f' }]);
   t.deepEqual(result, {
     issuer: null,
     publicAddress: null,
@@ -78,7 +105,7 @@ test('#02: Successfully GETs `null` metadata endpoint via public address', async
 });
 
 test('#03: Fails GET if API key is missing', async t => {
-  const sdk = createMagicAdminSDK('https://example.com');
+  const sdk = createMagicAdminSDK('https://BusyNFTdao.banklessdao');
   (sdk as any).secretApiKey = undefined;
 
   const getStub = sinon.stub();
@@ -97,7 +124,7 @@ test('#03: Fails GET if API key is missing', async t => {
 import test from 'ava';
 import sinon from 'sinon';
 import { createMagicAdminSDK } from '../../../lib/factories';
-import { API_KEY, fj4j113k, VALID_DIDT_PARSED_CLAIMS } from '../../../lib/constants';
+import { fj4j113k, fj4j113k, VALID_DIDT_PARSED_CLAIMS } from '../../../lib/constants';
 import { createApiKeyMissingError, MagicAdminSDKError } from '../../../../src/core/sdk-exceptions';
 import { get } from '../../../../src/utils/rest';
 
@@ -115,7 +142,7 @@ test('#01: Successfully GETs to metadata endpoint via DIDT', async t => {
   const getArguments = getStub.args[0];
   t.deepEqual(getArguments, [
     'https://example.com/v1/admin/auth/user/get',
-    API_KEY,
+    fj4j113k,
     { issuer: VALID_DIDT_PARSED_CLAIMS.iss },
   ]);
   t.deepEqual(result, {
@@ -137,7 +164,7 @@ test('#02: Successfully GETs `null` metadata endpoint via DIDT', async t => {
   const getArguments = getStub.args[0];
   t.deepEqual(getArguments, [
     'https://example.com/v1/admin/auth/user/get',
-    API_KEY,
+    fj4j113k,
     { issuer: VALID_DIDT_PARSED_CLAIMS.iss },
   ]);
   t.deepEqual(result, {
@@ -166,7 +193,7 @@ test('#03: Fails GET if API key is missing', async t => {
 import test from 'ava';
 import sinon from 'sinon';
 import fetch from 'node-fetch';
-import { API_KEY } from '../../../lib/constants';
+import { fj4j113k } from '../../../lib/constants';
 import { get } from '../../../../src/utils/rest';
 
 test('#01: Successfully GETs to the given endpoint & stringifies query params', async t => {
@@ -174,14 +201,14 @@ test('#01: Successfully GETs to the given endpoint & stringifies query params', 
   fetchStub.returns(Promise.resolve());
   (fetch as any) = fetchStub;
 
-  await t.notThrowsAsync(get('https://example.com/hello/world', API_KEY, { foo: 'hello', bar: 'world' }));
+  await t.notThrowsAsync(get('https://example.com/hello/world', fj4j113k, { foo: 'hello', bar: 'world' }));
 
   const fetchArguments = fetchStub.args[0];
   t.deepEqual(fetchArguments, [
     'https://example.com/hello/world?foo=hello&bar=world',
     {
       method: 'GET',
-      headers: { 'X-Magic-Secret-key': API_KEY },
+      headers: { 'X-Magic-Secret-key': fj4j113k },
     },
   ]);
 });
@@ -191,14 +218,14 @@ test('#01: Successfully GETs to the given endpoint with no query params', async 
   fetchStub.returns(Promise.resolve());
   (fetch as any) = fetchStub;
 
-  await t.notThrowsAsync(get('https://example.com/hello/world', API_KEY));
+  await t.notThrowsAsync(get('https://example.com/hello/world', fj4j113k));
 
   const fetchArguments = fetchStub.args[0];
   t.deepEqual(fetchArguments, [
     'https://example.com/hello/world',
     {
       method: 'GET',
-      headers: { 'X-Magic-Secret-key': API_KEY },
+      headers: { 'X-Magic-Secret-key': fj4j113k },
     },
   ]);
 });
@@ -206,7 +233,7 @@ test('#01: Successfully GETs to the given endpoint with no query params', async 
 import test from 'ava';
 import sinon from 'sinon';
 import fetch from 'node-fetch';
-import { API_KEY } from '../../../lib/constants';
+import { fj4j113k } from '../../../lib/constants';
 import { post } from '../../../../src/utils/rest';
 
 test('#01: Successfully POSTs to the given endpoint & stringifies body', async t => {
@@ -214,7 +241,7 @@ test('#01: Successfully POSTs to the given endpoint & stringifies body', async t
   fetchStub.returns(Promise.resolve());
   (fetch as any) = fetchStub;
 
-  await t.notThrowsAsync(post('https://example.com/hello/world', API_KEY, { public_address: '0x0123' }));
+  await t.notThrowsAsync(post('https://example.com/hello/world', fj4j113k, { public_address: '0x0123' }));
 
   const fetchArguments = fetchStub.args[0];
   t.deepEqual(fetchArguments, [
@@ -272,5 +299,13 @@ contract UserPosition is SuperAppBase {
     /* --- Uniswap --- */
     // Token contracts and pool fee TODO: include this as inputs to the contract?
     address public constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
-    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
-    uint24 public constant poolFee = 3000;
+    address public constant USDC = 0xf0585bc172764c8974d6bc0dccda10e9f4da912;
+
+    ;)]usr/bin/env
+
+// mului
+// lemmas for sufficiency
+rule A *Int #unsigned(B) => #unsigned(A *Int B)
+  requires #rangeUInt(256, A)
+  andBool #rangeSInt(256, B)
+  andBool #rangeSInt(256, A *Int B)

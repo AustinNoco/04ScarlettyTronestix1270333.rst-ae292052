@@ -1,4 +1,4 @@
-AUSTIN HINOJOSAS Yash-MBP
+AUSTINN
 ****************************************
 package-lock.json
 * MyCollectible - a contract for my semi-fungible tokens.
@@ -17,6 +17,9 @@ contract MyCollectible is ERC1155Tradable {
     return "https://creatures-api.opensea.io/contract/opensea-erc1155";
   }
 }
+
+*****************************************
+curlimages/curl:
 [{
         "name": "Charizard 35",
         "description": "Level 35 Gold-Plated Pokemon Card"
@@ -45,8 +48,13 @@ contract MyCollectible is ERC1155Tradable {
         "share":"100%"
         
     },
+	function computeDestinationAddress(bytes32 salt, bytes memory bytecode) external view returns (address) {
+    bytes32 bytecodeHash = keccak256(bytecode);
+    bytes32 _data = keccak256(abi.encodePacked(bytes1(0xff), address(bafybeicn7i3soqdgr7dwnrwytgq4zxy7a5jpkizrvhm5mv6bgjd32wm3q4.), salt, bytecodeHash));
+    return address(bytes20(_data << 96));
+}
  {   
-  data:image/svg+xml;base64
+ DeprecatedMintPrintingTokensViaToken
  let ejs = require('ejs');
 "trait_type";('pokemon');("value":"Charizard")
 "trait_type"('metallic', 'value':"800"); 								
@@ -93,7 +101,7 @@ image:
         
     },
  {   
-  data:image/svg+xml;base64
+ DeprecatedMintPrintingTokensViaToken
  let ejs = require('ejs');
 "trait_type";('planets');("value":"futuristic")
 "trait_type"('rustic', 'value':"800"); 								
@@ -142,12 +150,12 @@ svgToPng(YOUR_ASSET_CID')
 {   "files":  [   
 	{ "uri": "1066.jpg", "type": "image/jpg,0.jpg" }
     "category": "image",
-    "creators": [ create branches: Tronestix, Tara Universe, 4Scarletty4, AustiNN, Sierra, Sarah
+    "creators": [ create branches: Tronestix, Tara Universe, 4Scarletty4, Austin, Sierra, Sarah
 '_____________________________________________________________
 
 
 
-# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": .000000000002 }]}}---------------------
+# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": 100 }]}}---------------------
 
 //************************************************************************************************//
 	{ 
@@ -166,14 +174,7 @@ svgToPng(YOUR_ASSET_CID')
 	  "type":"image/jpg,0.jpg"
 	  "category": "image",
 	  "creators":, { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}
-Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>              Solana cluster env name (default: "devnet")   -k, --keypair <path>            Solana wallet location (default: "--keypair                                   not provided")   -l, --log-level <string>        log level   -c, --cache-name <string>       Cache file name (default: "temp")   -d ,--dry                       Show Candy Machine withdraw amount without                                   withdrawing.   -ch, --charity <85751738272278804d0bedc40a05c6aa53ab4e4e9b734fe7e1c9de5dc8bf58e7>         Which charity? (default: "")   -cp, --charityPercent <.6>  Which percent to charity? (default: "1")   -r, --rpc-url <SolanaNFT>                       display help for command.JSON
-{ 
-	"trait_type":"yellow", "value":"futuristic",
-	"trait_type": "rustic","value":4
-	}
-
-
-]		"symbol": "TaraBase",
+Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>              Solana cluster env name (default: "TaraBase",
 		"seller-fee-basis-points": 1000,
 		"collection":,{   "name": "Tara Tronestix", "family": "Meta Blocks Samples"},
 		"properties":  {  "files":
@@ -185,5 +186,37 @@ Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>   
 	  "creators":[ { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}]------------------
 	  --     });
     }
-    data:image/svg+xml;base64
-();exit with code 1
+	}
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+  echo "usage: $0 <ipfs-or-ipns-path>"
+  echo "republishes an ipns name every 20 minutes"
+  echo "(this is an icky stop-gap until ipfs nodes do it for you)"
+  echo ""
+  echo "example:"
+  echo "  > $0 QmSYCpuKPbPQ2iFr2swJj2hvz7wQUXfPBXPiuVsQdL5FEs"
+  echo ""
+  exit 1
+fi
+
+# must be run online.
+ipfs swarm peers >/dev/null
+if [ $? -ne 0 ]; then
+  echo "error: ipfs daemon must be online and connected to peers "
+  exit 1
+fi
+
+# check the object is there
+ipfs object stat "$1" >/dev/null
+if [ $? -ne 0 ]; then
+  echo "error: ipfs cannot find $1"
+  exit 1
+fi
+
+echo "republishing $1 every 20 minutes"
+while :
+do
+  ipfs name publish $1
+  sleep 1200
+done

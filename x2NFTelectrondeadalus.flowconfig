@@ -1,18 +1,96 @@
-var Web3 = require('web3');
-var web3 = new Web3(new Web3.providers.HttpProvider());
-var version = web3.version.api;
-        
-$.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0xfb6916095ca1df60bb79ce92ce3ea74c37c5d359', function (data) {
-    var contractABI = "";
-    contractABI = JSON.parse(data.result);
-    if (contractABI != ''){
-        var MyContract = web3.eth.contract(contractABI);
-        var myContractInstance = MyContract.at("0xfb6916095ca1df60bb79ce92ce3ea74c37c5d359");
-        var result = myContractInstance.memberId("0xfe8ad7dd2f564a877cc23feea6c0a9cc2e783715");
-        console.log("result1 : " + result);            
-        var result = myContractInstance.members(1);
-        console.log("result2 : " + result);
-    } else {
-        console.log("Error" );
-    }            
-});
+﻿Yashwanthsin-MBP
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+   "browser": true,
+   "mocha": true,
+   "node": true,
+  },
+  "rules": {
+   * "arrow-parents": ["off"],
+    "consistent-return": "off",
+   * "comma-dangle": "off",
+    "generator-star-spacing": "off",
+   * "import/no-unresolved": ["error", {"ignore": ["electron"] }],
+    "import/no-extraneous-dependencies": "off",
+    *"no-use-before-define": "off",
+    "promise/param-names": 2,
+    *"promise/always-return": 2,
+     "promise/always-catch": 2, // deprecated
+    *"promise/catch-or-return": 2,
+    "promise/no-native": 0,
+    *"react/jsx-no-bind": "off",
+    *"react/jsx-filename-extension": ["error", { "extensions":[".js", ".jsx"] }],
+    "react/prefer-stateless-function": "off",
+    *"flowtype-errors/show-errors": 2
+},
+  "plugins":[
+    "flowtype-errors"
+    "import",
+    "promise",
+    "react"
+    "Pinning.go"
+
+],
+  "settings": {
+    "import/resolver": {
+	"webpack": {
+	  "config": "config/webpack.config.eslint.js"
+	}
+     }
+   }
+}
+/******************************************************/
+[ignore]
+.*/node_modules/fbjs/.*
+.*/app/main.js
+.*/app/dist/.*
+.*/release,.*
+.*/owneraUsaBuisnessman*
+
+[include]
+
+[libs]
+
+[libs.rs\\//AnchorxSerumRPC7516.toml]
+
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "> 1%",
+            "last 3 versions",
+            "ie >= 9",
+            "ios >= 8",
+            "android >= 4.2"
+          ]
+        },
+        "useBuiltIns": false
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "styled-components",
+      {
+        "displayName": true
+      }
+    ]
+  ]
+}
+//*****************************************************
+gulp.task(“thrift”, function ()
+{
+    var tStream = new thrift();
+    gulp.src(‘./thrift-src/*.thrift’)
+        .pipe(tStream)
+        .pipe(gulp.dest(‘./lib’));
+    tStream.definitions.pipe(gulp.dest(‘typings/gen-thrift’));
+}
+);

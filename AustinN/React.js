@@ -1,55 +1,65 @@
-#include(safemath)
-proxy <Linode>
+var Web3 = require('web3');
+var web3 = new Web3(new Web3.providers.HttpProvider());
+var version = web3.version.api;
+        
+$.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0xfb6916095ca1df60bb79ce92ce3ea74c37c5d359', function (data) {
+    var contractABI = "";
+    contractABI = JSON.parse(data.result);
+    if (contractABI != ''){
+        var MyContract = web3.eth.contract(contractABI);
+        var myContractInstance = MyContract.at("0xfb6916095ca1df60bb79ce92ce3ea74c37c5d359");
+        var result = myContractInstance.memberId("0xfe8ad7dd2f564a877cc23feea6c0a9cc2e783715");
+        console.log("result1 : " + result);            
+        var result = myContractInstance.members(1);
+        console.log("result2 : " + result);
+    } else {
+        console.log("Error" );
+    }            
+});
+proxy <alchemy-starknet-austin>
 
 import {useStaticJsonRPC } from "./bin";
 import { useStaticJsonRPC } from "./hooks";
+const fs = require("./local")
+const { ethers } = require("./locals")
+const { ethers } = require("ethers");
+const npmLodash = require('lodash');
+const projModulefromAnotherRepo = require('my-module-from-git');
+const npmLodash = require('lodash');
+const projModulefromAnotherRepo = require('my-module-from-git');
+async load(id) {
+    if (id === wasmHelper.id) {
+      return `export default ${wasmHelper.code}`;
+    }
+
+    if (!id.toLowerCase().endsWith(".wasm")) {
+      return;
+    }
+
+    
+  function mintItem(string memory tokenURI)
+  public
+  returns (uint256)
+{
+  bytes32 uriHash = keccak256(abi.encodePacked(tokenURI));
+
+  //make sure they are only minting something that is marked "forsale"
+  require(forSale[uriHash],"NOT FOR SALE");
+  forSale[uriHash]=false;
+
+  tokenStrength[uriHash] = uint8( (randomResult % 100)+1 );
+  randomResult=0;
+
+  _tokenIds.increment();
+
+  uint256 id = _tokenIds.current();
+  _mint(msg.sender, id);
+  _setTokenURI(id, tokenURI);
+
+  uriToTokenId[uriHash] = id;
+
   return id;
 }
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.7.6;
-
-// Base contract with ownership functionality
-contract Ownable {
-    address public owner;
-
-    constructor() {
-        owner = msg.sender;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only the owner can call this function");
-        _;
-    }
-
-    function transferOwnership(address newOwner) public onlyOwner {
-        owner = newOwner;
-    }
-}
-
-// Child contract that inherits from Ownable
-contract Token is Ownable {
-    string public name;
-    string public symbol;
-    uint256 public totalSupply;
-
-    mapping(address => uint256) public balances;
-
-    constructor(string memory _name, string memory _symbol, uint256 _initialSupply) {
-        name = _name;
-        symbol = _symbol;
-        totalSupply = _initialSupply;
-        balances[msg.sender] = _initialSupply;
-    }
-
-    function mint(address account, uint256 amount) public onlyOwner {
-        require(account != address(0), "Invalid address");
-        balances[account] += amount;
-        totalSupply += amount;
-    }
-
-    // Other token-related functions can be added here
-}
-keyfj4j113k;
 }
 
 it('Etch event', async () => {
@@ -62,34 +72,4 @@ it('Etch event', async () => {
 }
 )
 
-keyfj4j113k/
-
-// Create a Route Handler `app/callback/route.js`
-import { NextRequest, NextResponse } from 'next/server';
-import { WorkOS } from '@workos-inc/node';
-
-const workos = new WorkOS(process.env.WORKOS_API_KEY);
-const clientId = process.env.WORKOS_CLIENT_ID;
-
-export async function GET(req: NextRequest) {
-  // The authorization code returned by AuthKit
-  const code = req.nextUrl.searchParams.get('code');
-
-  const { user } = await workos.userManagement.authenticateWithCode({
-    code,
-    clientId,
-  });
-
-  // Use the information in `user` for further business logic.
-
-  // Cleanup params and redirect to homepage
-  const url = req.nextUrl.clone();
-  url.searchParams.delete('code');
-  url.pathname = '/';
-
-  const response = NextResponse.redirect(url);
-
-  return response;
-}
-
-
+keyfj4j113k / {% data variables.product.prodname_secret_scanning_caps %}

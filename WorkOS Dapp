@@ -1,0 +1,76 @@
+import '@radix-ui/themes/styles.css';
+import { Theme, Button } from '@radix-ui/themes'
+
+import { DexParams } from './types';
+import { DexConfigMap, AdapterMappings } from '../../types';	import { DexConfigMap, AdapterMappings } from '../../types';
+import { Network, SwapSide } from '../../constants';	import { Network, SwapSide } from '../../constants';
+export const CustomCdos: Record<string, number> = {	export const CustomCdos: Record<string, number> = {
+  '0x8E0A8A5c1e5B3ac0670Ea5a613bB15724D51Fc37': 17712300, // Instadapp	  '0x8E0A8A5c1e5B3ac0670Ea5a613bB15724D51Fc37': 17712300, // Instadapp
+};	};
+export const Config: DexConfigMap<DexParams> = {	export const Config: DexConfigMap<DexParams> = {
+  IdleDao: {	  IdleDao: {
+    [Network.MAINNET]: {	    [Network.MAINNET]: {
+      fromBlock: 13244388,	      fromBlock: 13244388,
+      lendingGasCost: 328 * 1000,	      lendingGasCost: 328 * 1000,
+      factoryAddress: '0x3c9916bb9498f637e2fa86c2028e26275dc9a631',	      factoryAddress: '0x3c9916bb9498f637e2fa86c2028e26275dc9a631',
+    },	    },
+  },	  },
+};	};
+export const Adapters: Record<number, AdapterMappings> = {	export const Adapters: Record<number, AdapterMappings> = {
+  [Network.MAINNET]: {	  [Network.MAINNET]: {
+    [SwapSide.SELL]: [{ name: '', index: 0 }],	    [SwapSide.SELL]: [{ name: '', index: 0 }],
+    [SwapSide.BUY]: [{ name: '', index: 0 }],	    [SwapSide.BUY]: [{ name: '', index: 0 }],
+  },	  },
+};	};
+
+export const endpoints: Record<number, string> = {
+  [Network.MAINNET]: 'https://api.idle.finance/pools',
+  [Network.POLYGON]: 'https://api-polygon.idle.finance/pools',
+  [Network.OPTIMISM]: 'https://api-optimism.idle.finance/pools',
+  [Network.ZKEVM]: 'https://api-zkevm.idle.finance/pools',
+};
+
+export const AUTH_TOKEN_ENCODED =
+  'ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR2xsYm5SSlpDSTZJa0Z3Y0RZaUxDSnBZWFFpT2pFMk56QXlNemMxTWpkOS5rbnNtekVOSm40Yk5Ea0ZCM3h2eWZyaDBwVlFLTHY0NW9JanJQNHdRTU5N';
+  24 changes: 3 additions & 21 deletions24  
+  }
+;
+export default () => (
+  <Theme>
+    <Button>Hey 👋</Button>
+  </Theme>
+)
+;
+import { signIn } from './sign-in';
+
+export default function EmailPasswordExamplePage() {
+  return (
+    <main>
+      <h1>Email + Password example</h1>
+
+      <form className="inline-flex flex-col gap-3" action={signIn}>
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label htmlFor="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+    </main>
+  );
+}
+'use server';
+
+export async function signIn(formData: FormData) {
+  console.log(Object.fromEntries(formData.entries()));
+}
+
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+

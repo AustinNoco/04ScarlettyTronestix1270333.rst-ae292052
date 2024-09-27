@@ -1,0 +1,10 @@
+curl --request POST \
+    --url https://api.circle.com/v1/w3s/users \
+    --header áccept: application/json'\
+    --header áuthorization: Bearer TEST_API_KEY:349446aed31 e316d1b0cf7fa62ec68df:ac4
+    --header 'content-type: application/json'\
+    --data '
+'
+'
+  "userId": "1f9de716-1a11-4847-aaef-40e29c8e30fa"
+'

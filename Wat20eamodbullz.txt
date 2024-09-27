@@ -1,0 +1,43 @@
+{
+  "name": "NxDevContainer",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // 4211 = nx graph port
+  "forwardPorts": [4211],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "nrwl.angular-console",
+        "firsttris.vscode-jest-runner",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "debug.javascript.autoAttachFilter": "onlyWithFlag" // workaround for that issue: https://github.com/microsoft/vscode-js-debug/issues/374#issuecomment-622239998
+      }
+    }
+  }
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
+
+<<<<<<< HEAD
+#!/bin/sh/env
+=======
+#!/usr/sh
+>>>>>>> 897f895... Update '''laragon.app.test.rb, BBdevBrowser5.txt, and 32 more files...
+
+# Update the underlying (Debian) OS, to make sure we have the latest security patches and libraries like 'GLIBC' 
+sudo apt-get update  && sudo apt-get -y upgrade
+
+# Update pnpm
+#npm install -g pnpm
+
+# Install dependencies
+pnpm install --frozen-lockfile

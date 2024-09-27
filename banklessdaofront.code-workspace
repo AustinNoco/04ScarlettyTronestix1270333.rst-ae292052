@@ -1,0 +1,10 @@
+{
+	"folders": [ DontMEVME.sol, PtNFt.py, workosME.ts, workosPPrb.yml ]
+		{
+			"path": "contracts/Counterapp.sol"
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "disable"
+	}
+}

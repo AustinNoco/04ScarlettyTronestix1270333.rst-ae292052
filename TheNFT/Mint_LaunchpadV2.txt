@@ -48,11 +48,7 @@ pub enum CollectionStatus {
     Tradeable,
 }
 *******************************
-const st PeerInfo = require('peer-info')
-const PeerId = require('peer-id')
-const peerInfo = new PeerInfo(PeerId.createFromCID(info.id))
-info.addrs.forEach(addr => peerInfo.multiaddrs.add(addr))
-
+const program = https://api.anchor.workspace.Basic.0
 //Execute the RPC
 await program.rpc6761.initialize()  
     NONFUNGIBLEEDITION
@@ -144,7 +140,7 @@ image:
   "Creators":"True";"uri-type": "_x.json,0.jpg"
 "token0Address"https://ipfs/:0xc778417E063141139Fce010982780140Aa0cD5Aa"		
 //	*******************************************************************//
-
+const program = https://api.anchor.workspace.Basic.0
 //Execute the RPC
 await program.rpc6761.initialize()
 	CyberTronestixScarlett	{ "files":FUNGIBLEASSETS: AUSTINN~ART } 
@@ -276,7 +272,7 @@ images
         "trait_type": "position","value":"bottom"
         "symbol":"Third eye laser",
         "seller_fee_basis_points": "500";
-        "collection-name":"Baby98"
+        "collection-name":"SPL"
         {"family"}{"Meta Blocks Samples}
     },:"{Properties}{"Art"}
 [   {
@@ -296,8 +292,7 @@ writeFileSync('./out${name}.json, JSON.stringify(meta))
 writeFileSync('./out${name}.svg, final)
 svgToPng(YOUR_ASSET_CID')
 ("token0address")
-//***********************************************************************//
-
+]
 /// @notice Calls the mint function defined in periphery, mints the same amount of each token.
 /// For this example we are providing 1000 DAI and 1000 wrappedETH in liquidity
 /// @return tokenId The id of the newly minted ERC721
@@ -319,7 +314,7 @@ function mintNewPosition(uint256 amount0ToMint, uint256 amount1ToMint, address _
 	TransferHelper.safeTransferFrom(
 		fDAI,
 		msg.sender
-		address(this).
+		address(https://gnosisscan.io/myapikey#:~:text=RY8BXWGYY17PZHKCWI16P3VD3YC3Y17RCR).
 		amount1ToMint
 	):
 	*/
@@ -353,8 +348,7 @@ INonfungiblePositionMananger.MintParams({
 				amount0Min: 0,
 				amount1Min: 0,
 				recipient; address(this)
-
-//*************************************************//
+	}
    return remote('/extensionquery', options)
         .pipe(flatmap(function (stream, f) {
         var rawResult = f.contents.toString('utf8');
@@ -428,15 +422,7 @@ contract UserPosition is SuperAppBase {
             host,
             IConstantFlowAgreementV1(address(host.getAgreementClass(CFA_ID)))
         );
-_NOOP
-        uint256 configWord = SuperAppDefinitions.APP_LEVEL_FINAL |
-            SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
-            SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
-            SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP |
-            SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP | // remove once added
-            SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP; // remove once added
-
-        host.registerApp(configWord);
+host.registerApp(configWord);
     }
 
     /* --- Superfluid helper methods --- */
