@@ -1,0 +1,19 @@
+﻿Austin-Yash MBP
+  {
+	"compile onSave": False,
+	"compiler Options": {
+				"baseUrl": "./"
+				"outdir": "./dist/out-tsc",
+				"SourceMap": true,
+				"declaration": false,
+				"downlevelIteration": true,
+				"moduleResolution": "node",
+				"importhelpers": true,
+				"target": "es2015",
+				"module": "es2020",
+				"lib": [
+			"es2018",
+		]
+	}
+}
+Privatebuild; "DDBLD360A"

@@ -1,0 +1,8 @@
+LoadPlugin smart
+<Plugin "smart">
+  Disk "nvme0n1"
+  Disk "sda"
+ #additional known params
+  Disk "sdb -d sat --drivedb=/etc/smartmontools/drivedb.h"
+  IgnoreSelected false
+</Plugin>

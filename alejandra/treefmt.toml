@@ -1,0 +1,21 @@
+[formatter]
+
+[formatter.nix]
+command = "cargo"
+includes = ["*.nix"]
+excludes = ["./src/alejandra/tests/cases/**"]
+options = ["run", "--"]
+
+[formatter.prettier]
+command = "prettier"
+includes = ["*.html", "*.js", "*.json", "*.md", "*.toml", "*.yaml"]
+options = ["--plugin", "prettier-plugin-toml", "--write"]
+
+[formatter.rust]
+command = "rustfmt"
+includes = ["*.rs"]
+
+[formatter.shell]
+command = "shfmt"
+includes = ["*.sh"]
+options = ["-bn", "-ci", "-sr", "-i", "2", "-s", "-w"]

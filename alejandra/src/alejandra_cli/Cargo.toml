@@ -1,0 +1,31 @@
+[[bin]]
+name = "alejandra"
+path = "src/main.rs"
+
+[dependencies]
+alejandra = { path = "../alejandra" }
+clap = { version = "*", default_features = false, features = [
+  "color",
+  "derive",
+  "std",
+  "strsim"
+] }
+futures = { version = "*", default_features = false, features = [
+  "executor",
+  "thread-pool"
+] }
+num_cpus = { version = "*", default_features = false, features = [] }
+rand = { version = "*", default-features = false, features = [
+  "alloc",
+  "getrandom"
+] }
+walkdir = { version = "*", default_features = false, features = [] }
+
+[package]
+authors = ["Kevin Amado <kamadorueda@gmail.com>"]
+description = "The Uncompromising Nix Code Formatter"
+edition = "2021"
+license = "Unlicense"
+name = "alejandra_cli"
+repository = "https://github.com/kamadorueda/alejandra"
+version = "3.0.0"

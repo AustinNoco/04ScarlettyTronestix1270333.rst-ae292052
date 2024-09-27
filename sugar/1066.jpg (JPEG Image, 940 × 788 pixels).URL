@@ -1,6 +1,6 @@
 [Route("api/[controller]")]
 '''URL='''
-'''#/usr/bin $ type kali
+'''!/mnt/tmp $ type Linux
 HotKey=0
 IconFile=C:\Users\Sarah\AppData\Local\Mozilla\Firefox\Profiles\hi005ajw.default-release\shortcutCache\Im3rVf3pTJMT8FwOVaceeQ==.ico
 IconIndex=0

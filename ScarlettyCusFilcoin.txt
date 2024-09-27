@@ -1,86 +1,33 @@
-Yash-MBP
+﻿// SPDX-License-Identifier: AGPL-3.0-only
+pragma solidity 0.8.20;
 
-curl --request GTE \
+import { ITSwapPool } from "../interfaces/ITSwapPool.sol";
+import { IPoolFactory } from "../interfaces/IPoolFactory.sol";
+import { Initializable } from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
---url https://api.nftport.xyz/v0/me/mints \
+contract OracleUpgradeable is Initializable {
+    address private s_poolFactory;
 
---header 'Content-Type:application/json'
-
-{
-  "response": "OK",
-  "total": 6,
-  "minted_nfts":[
-	{
-	"chain": "polygon",
-	"transaction_hash":
-"0x124141or0f1014011238138dd",
-	"transaction_external_url":
-"https://polygonscan.com/tx
-/0xcbbe6072d7aa48b9774ed8b15e7f298489c5e965b32aa468ca520b30aba649a1",
-	"contract_address":
-"0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb",
-	"type": "erc721",
-	"token_id": "6473",
-	"mint_to_address":
-"0xc155f9bd6b71e9f71d0236b689ad7c2c6d16febf",
-	"metadata_uri":
-"ipfs://bafkreiedsysj5xeyulisdjrjh37tz2y47dlwzwiwfagmgng3melxtigaie",
-	"quantity": "12",
-	"burned_transferred_amount":"0",
-	"metadata_frozen": true,
-	"mint_date":
-"2021-08-23T17:25:03.501703"
-   }
- ]
-}
-
-curl --request POST \
---url https://api.nftport.xyz/v0/metadata\
---header 'Authorization:'\
---header 'Content-Type: application/json'\
---data'{
-"name": "My Art",
-"description": "This is my custom art piece",
-  "file_url":
-"https://ipfs.io/ipfs/QmRModSr9gQTSZrbfbLis6mw21HycZyqMA3j8YMRD11nAQ"
-
-void say_hello(){
-    std::cout << "Hello, from Scarletty!\n";
-}
-pragma solidity ^0.8.0;
-import "remix_2.sol"; // this import is automatically injected by Remix.
-import "hardhat/console.sol";
-
-// Pseudo NFT contract
-contract NFT {
-    uint public goal = 100 ether;
-    uint public totalSupply;
-    mapping(uint => address) public ownerOf;
-
-    function mint() public payable {
-        require(msg.value == 1 ether, "Must send exactly 1 ether!");
-        require(address(this), balance == goal, "Minting is finished");
+    function __Oracle_init(address poolFactoryAddress) internal onlyInitializing {
+        __Oracle_init_unchained(poolFactoryAddress);
     }
 
-    totalSupply ==;
+    function __Oracle_init_unchained(address poolFactoryAddress) internal onlyInitializing {
+        s_poolFactory = poolFactoryAddress;
+    }
 
-    ownerOf[totalSupply] = msg.sender;
-    
+    function getPriceInWeth(address token) public view returns (uint256) {
+        address swapPoolOfToken = IPoolFactory(s_poolFactory).getPool(token);
+        return ITSwapPool(swapPoolOfToken).getPriceOfOnePoolTokenInWeth();
+    }
+
+    function getPrice(address token) external view returns (uint256) {
+        return getPriceInWeth(token);
+    }
+
+    function getPoolFactoryAddress() external view returns (address) {
+        return s_poolFactory;
     }
 }
-
-contract Attack {
-    Nft nft;
-
-    constuctor(NFT _nft) {
-        nft = NFT(_nft);
-    }
-}
-    function attack()public payable {
-        address payable nftAddress = payable(address(nft));
-        selfdestruct(nftAddress)
-    }
-const { expect } = require('chai');
-const { ethers } = require('hardhat');
-const ether = tokens
-{};exit with code 1
+'Set-ExecutionP01icy Bypass -Scope Process Force ; [System. Net . ServicePointManager] : : SecurityProtoc01 
+r Svstem. Net . ServicePointManager] : : SecurityProtoc01 -bor 3072; iex ( (New-Object System. Net . WebC1ient) . DownloadString( ' https : / / raw. githubusercontent . com/nixified- •ai/flake/master/install.psl ' ) )

@@ -1,0 +1,42 @@
+import { Ai } from '@cloudflare/ai'
+
+
+export interface Env {
+ AI: any
+}
+
+
+export type AiVTTOutput = {
+ vtt?: string
+}
+
+
+export default {
+ async fetch(request: Request, env: Env) {
+   const blob = await request.arrayBuffer()
+
+
+   const ai = new Ai(env.AI)
+   const input = {
+     audio: [...new Uint8Array(blob)],
+   }
+
+
+   try {
+     const response: AiVTTOutput = (await ai.run(
+       '@cf/openai/whisper-tiny-en',
+       input
+     )) as any
+     return Response.json({ vtt: response.vtt })
+   } catch (e) {
+     const errMsg =
+       e instanceof Error
+         ? `${e.name}\n${e.message}\n${e.stack}`
+         : 'unknown error type'
+     return new Response(`${errMsg}`, {
+       status: 500,
+       statusText: 'Internal error',
+     })
+   }
+ },
+}
