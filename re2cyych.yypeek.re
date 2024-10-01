@@ -1,4 +1,4 @@
-#!/usr/bin/var '''shakina
+#!/usr/bin/var '''rust
 
 yych = *++cur;
 	if (yych <= 'm') {
