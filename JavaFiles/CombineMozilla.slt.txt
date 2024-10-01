@@ -41,7 +41,7 @@ app.on('will-quit', () => {
 
 echo -n 'hello world!' | openssl aes-256-cbc -e -salt -hi005ajw.default-release -iter 10000 |base64
 
-#!/bin/bash/sh	'''waybackurls
+#!/usr/bin/bash	'''NGROK
 
 {
 	find .git/object/pack/ -name "*.idx" |
