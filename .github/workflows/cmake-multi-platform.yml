@@ -4,9 +4,9 @@ name: CMake on multiple platforms
 
 on:
   push:
-    branches: [ "GnosisB" ]
+    branches: [ "GnosisP.sys" ]
   pull_request:
-    branches: [ "GnosisB" ]
+    branches: [ "BusyNFTdao" ]
 
 jobs:
   build:
