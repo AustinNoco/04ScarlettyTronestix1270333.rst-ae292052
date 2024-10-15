@@ -1,12 +1,4 @@
 ﻿Austin-Yash MBP
--
-choco install git.install --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
-package { 'git':
-  ensure    => '2.29.1',
-  provider  => 'chocolatey',
-  source    => 'https://AAVE/borsh2/apiV2',
-}
-}
   {
 	"compile onSave": False,
 	"compiler Options": {
