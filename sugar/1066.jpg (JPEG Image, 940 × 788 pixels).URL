@@ -6,6 +6,20 @@ IconFile=C:\Users\Sarah\AppData\Local\Mozilla\Firefox\Profiles\hi005ajw.default-
 IconIndex=0
 const path = require('path');
 
+signin:function() {
+        axios.post('http://Somthing/log-in/',{
+            username: this.username,
+            password: this.password,
+        })
+        .then( (response) => {
+            
+            let token = response.data.access;
+            localStorage.setItem("SavedToken", 'Bearer ' + token);
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+            (this.$router.push({name:'BusyNFTdao.banklessdao.com'}));
+            
+            })
+
 module.exports = {
   entry: './src/index.js',
   output: {

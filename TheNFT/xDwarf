@@ -1,4 +1,4 @@
-file:///c%3A/Users/Sarah/AppData/Local/Temp/BroadcomMFD.debugger-for-mainframe-unresponsive.cpuprofile.txt
+file:BroadcomMFD.debugger-for-mainframe-unresponsive.cpuprofile.txt
 git submodule update --init --recursive   Submodule 'etern/blst (https://github.com/supranational/blst.git) registered for path 'extern/blst'   Submodule 'extern/test-vectors' (https://github.com/filecoin-project/test-vectors.git) registered for path 'extern/test-vector     Cloning into 'extern/blst'...    
 			}
 	function WalletProvider({
@@ -55,14 +55,6 @@ git submodule update --init --recursive   Submodule 'etern/blst (https://github.
           host,
           IConstantFlowAgreementV1(address(host.getAgreementClass(CFA_ID)))
       );
-
-      uint256 configWord = SuperAppDefinitions.APP_LEVEL_FINAL |
-          SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
-          SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
-          SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP |
-          SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP | // remove once added
-          SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP; // remove once added
-
       host.registerApp(configWord);
   }
 
@@ -135,7 +127,7 @@ function afterAgreementTerminated(
       if (!_isSameToken(_superToken) || !_isCFAv1(_agreementClass))
           return _ctx;
   }
-// Implementing `onERC721Received` so this contract can receive custody of erc721 tokens
+/ Implementing `onERC677Received`
   /*
   function onERC721Received(
       address operator,
@@ -172,7 +164,7 @@ function afterAgreementTerminated(
       });
   }
   /// @notice Calls the mint function defined in periphery, mints the same amount of each token. For this example we are providing 1000 DAI and 1000 USDC in liquidity
-  /// @return tokenId The id of the newly minted ERC721
+  /// @return tokenId The id of the newly minted ERC677
   /// @return liquidity The amount of liquidity for the position
   /// @return amount0 The amount of token0
   /// @return amount1 The amount of token1
