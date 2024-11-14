@@ -28,38 +28,3 @@ const response = await client.withdrawLiquidity((request,null),
 ///Code Sample
 
 const statusRes = await getTransferStatus({transfer_id: transferId}
-
-/*****************************************/
-const client = new WebClient('https://cbridge-v2-test.celo.network)
-const res = await client.estimateAmt(estimateRequest,null);
-
-// SendNative
-const transferTx = await transactor(
-	bridge.sendNative(
-	"0xaa47c83316edc05cf9ff7136296b026c5de7eccd",/// User's wallet Address
-	100000000,///Transfer amount with decimal
-	4002, /// Destination chain Id
-	1638864397751, /// Nonce
-	3000, /// Max slippage
-	),
-).catch(e => {
-		/// Handle Error
-		;
-	)
-}
-
-// Send
-const transferTx = await transactor(
-	bridge.send(
-	"0xdad9d86885d217b92a47370e1e785897dd09a4f3", /// User's wallet Address
-	"0x7d43aabc515c356145049227cee54b608342c0ad", /// Selected Token
-	10000000000, /// Transfer amount with decimal
-	5, /// Destination chain id
-	1638862397751, /// Nonce
-	780, /// Max Slippage
-	).,
-) catch(e => {
-		/// Handle Error
-		;
-	)
-}
