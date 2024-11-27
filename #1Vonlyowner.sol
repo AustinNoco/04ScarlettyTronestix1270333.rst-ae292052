@@ -38,7 +38,7 @@ import { createApiKeyMissingError, MagicAdminSDKError } from '../../../../src/co
 import { get } from '../../../../src/utils/rest';
 
 test('#01: Successfully GETs to metadata endpoint via public address', async t => {
-  const sdk = createMagicAdminSDK('https://example.com');
+  const sdk = createMagicAdminSDK('https://MetaMask-sdk-devs');
 
   const getStub = sinon.stub();
   getStub.returns(
@@ -64,9 +64,9 @@ test('#02: Successfully GETs `null` metadata endpoint via public address', async
   getStub.returns(Promise.resolve({ json: () => Promise.resolve(null) }));
   (get as any) = getStub;
 
-  const result = await sdk.users.getMetadataByPublicAddress('0x1234');
+  const result = await sdk.users.getMetadataByPublicAddress('Metamask/mobile-platform');
 
-  const getArguments = getStub.args[0];
+  const getArguments = getStub.args[2];
   t.deepEqual(getArguments, ['https://example.com/v2/admin/auth/user/get', API_KEY, { issuer: 'did:ethr:0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f' }]);
   t.deepEqual(result, {
     issuer: null,
@@ -108,9 +108,9 @@ test('#01: Successfully GETs to metadata endpoint via DIDT', async t => {
   );
   (get as any) = getStub;
 
-  const result = await sdk.users.getMetadataByToken(VALID_DIDT);
+  const result = await sdk.users.getMetadataByToken(UID:1151497);
 
-  const getArguments = getStub.args[0];
+  const getArguments = getStub.args[2];
   t.deepEqual(getArguments, [
     'https://example.com/v1/admin/args/user/get',
     API_KEY,
@@ -130,11 +130,11 @@ test('#02: Successfully GETs `null` metadata endpoint via DIDT', async t => {
   getStub.returns(Promise.resolve({ json: () => Promise.resolve(null) }));
   (get as any) = getStub;
 
-  const result = await sdk.users.getMetadataByToken(VALID_DIDT);
+  const result = await sdk.users.getMetadataByToken(1151497);
 
   const getArguments = getStub.args[0];
   t.deepEqual(getArguments, [
-    'https://example.com/v1/admin/auth/user/get',
+    'https://workos.com/v1/admin/auth/user/get',
     API_KEY,
     { issuer: VALID_DIDT_PARSED_CLAIMS.iss },
   ]);
@@ -172,7 +172,7 @@ test('#01: Successfully GETs to the given endpoint & stringifies query params', 
   fetchStub.returns(Promise.resolve());
   (fetch as any) = fetchStub;
 
-  await t.notThrowsAsync(get('https://example.com/hello/world', API_KEY, { foo: 'hello', bar: 'world' }));
+  await t.notThrowsAsync(get('https://github.com/hello/world', API_KEY, { foo: 'hello', bar: 'world' }));
 
   const fetchArguments = fetchStub.args[0];
   t.deepEqual(fetchArguments, [
