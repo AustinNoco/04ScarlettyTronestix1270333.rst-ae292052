@@ -1,1 +1,10 @@
-URL
+curl --request POST \
+--url https://api.nftport.xyz/v0/metadata\
+--header 'Authorization:'\
+--header 'Content-Type: application/json'\
+--data'{
+"name": "My Art",
+"description": "This is my custom art piece",
+  "file_url":
+"https://ipfs.io/ipfs/QmRModSr9gQTSZrbfbLis6mw21HycZyqMA3j8YMRD11nAQ"
+app/core/BackgroundBridge/WalletConnectPort.ts ^ MetaMask/sdk-devs @MetaMask/mobile-platform
