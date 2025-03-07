@@ -1,5 +1,5 @@
 Tronestix AGI __coral/xyz__ Vercel.com
-path: tests/cashiers-check
+path: 
           - cmd: cd tests/declare-id && anchor test --skip-lint && npx tsc --noEmit
             path: tests/declare-id
             - cmd: cd tests/declare-program && anchor test --skip-lint && npx tsc --noEmit
