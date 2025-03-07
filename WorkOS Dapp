@@ -40,7 +40,8 @@ export default () => (
     <Button>Hey 👋</Button>
   </Theme>
 )
-;
+https://captivating-table-12-staging.authkit.app/sign-up;
+
 import { signIn } from './sign-in';
 
 export default function EmailPasswordExamplePage() {
