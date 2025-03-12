@@ -1,5 +1,5 @@
-AUSTINN
-****************************************
+AUSTIN HINOJOSAS Yash-MBP
+
 package-lock.json
 * MyCollectible - a contract for my semi-fungible tokens.
  */
@@ -17,9 +17,6 @@ contract MyCollectible is ERC1155Tradable {
     return "https://creatures-api.opensea.io/contract/opensea-erc1155";
   }
 }
-
-*****************************************
-curlimages/curl:
 [{
         "name": "Charizard 35",
         "description": "Level 35 Gold-Plated Pokemon Card"
@@ -54,16 +51,14 @@ curlimages/curl:
     return address(bytes20(_data << 96));
 }
  {   
- DeprecatedMintPrintingTokensViaToken
+  data:image/svg+xml;base64
  let ejs = require('ejs');
 "trait_type";('pokemon');("value":"Charizard")
 "trait_type"('metallic', 'value':"800"); 								
 "uri-type"=> {"_x.json,0.jpg}
-  "Creators":"True";"uri-type": "_x.json,0.jpg"
-writeFileSync('./out${name}.json, JSON.stringify(meta))
+  "Creators":"True";"uri-type": "1066.json,0.jpg"
 writeFileSync('./out${name}.svg, final)
 svgToPng(YOUR_ASSET_CID')
-***********************page break********************************
 const program = https://api.anchor.workspace.Basic.0
 //Execute the RPC
 await program.rpc6761.initialize()  
@@ -101,7 +96,7 @@ image:
         
     },
  {   
- DeprecatedMintPrintingTokensViaToken
+  data:image/svg+xml;base64
  let ejs = require('ejs');
 "trait_type";('planets');("value":"futuristic")
 "trait_type"('rustic', 'value':"800"); 								
@@ -110,8 +105,6 @@ image:
 writeFileSync('./out${name}.json, JSON.stringify(meta))
 writeFileSync('./out${name}.svg, final)
 svgToPng(YOUR_ASSET_CID')
-//********************************Do Not Touch**************************************************//
-
 	{  "name": "Tronestix Green",
 	   "description": "Tara universe...",
 	   "image": "OIP.png", 
@@ -133,8 +126,6 @@ svgToPng(YOUR_ASSET_CID')
 	 	   "type": "image/jpg,OIP.jpg" },
 }		   "category": "image", "creators":                       
 "address":"48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ", "share": 100 }]}}
-
-//********************************Do Not Touch*********************************************//
 		"name": "Tara - Purple Top Card",
 		"description": "Tara universe is ...",
 		"image": "4.png",
@@ -155,7 +146,7 @@ svgToPng(YOUR_ASSET_CID')
 
 
 
-# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": 100 }]}}---------------------
+# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": .0000000000013 }]}}---------------------
 
 //************************************************************************************************//
 	{ 
@@ -186,37 +177,3 @@ Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>   
 	  "creators":[ { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}]------------------
 	  --     });
     }
-	}
-#!/bin/bash
-
-if [ "$#" -ne 1 ]; then
-  echo "usage: $0 <ipfs-or-ipns-path>"
-  echo "republishes an ipns name every 20 minutes"
-  echo "(this is an icky stop-gap until ipfs nodes do it for you)"
-  echo ""
-  echo "example:"
-  echo "  > $0 QmSYCpuKPbPQ2iFr2swJj2hvz7wQUXfPBXPiuVsQdL5FEs"
-  echo ""
-  exit 1
-fi
-
-# must be run online.
-ipfs swarm peers >/dev/null
-if [ $? -ne 0 ]; then
-  echo "error: ipfs daemon must be online and connected to peers "
-  exit 1
-fi
-
-# check the object is there
-ipfs object stat "$1" >/dev/null
-if [ $? -ne 0 ]; then
-  echo "error: ipfs cannot find $1"
-  exit 1
-fi
-
-echo "republishing $1 every 20 minutes"
-while :
-do
-  ipfs name publish $1
-  sleep 1200
-done

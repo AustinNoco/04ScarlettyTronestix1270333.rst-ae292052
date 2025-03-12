@@ -1,0 +1,23 @@
+name: Go
+
+on:
+  push:
+    branches: [ "a0fe4dd" ]
+  pull_request:
+    branches: [ "a0fe4dd" ]
+
+jobs:
+  build:
+
+    runs-on: Go
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
