@@ -1,6 +1,6 @@
 ![Build Status](https://github.com/<owner>/<repo>/actions/workflows/<[![Compress Images](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml/badge.svg)](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml)>/badge.svg)
 
-![Build Status](https://github.com/<owner>/<repo>/actions/workflows/<[Build Status](https://github.com/<owner>/<repo>/actions/workflows/<workflow-file>/badge.svg)>/badge.svg)
+![Build Status](https://github.com/<owner>/<repo>/actions/workflows/<[![Compress Images](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml/badge.svg?event=release)](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml)>/badge.svg)
 
 Tronestix AGI __coral/xyz__ Vercel.com
 path: 
