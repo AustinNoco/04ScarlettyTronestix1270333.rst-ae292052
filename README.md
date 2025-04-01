@@ -4,6 +4,12 @@
 
 ![Build Status](https://github.com/<owner>/<repo>/actions/workflows/<[![Compress Images](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml/badge.svg?event=release)](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml)>/badge.svg)
 [![Update Latest Build Version](https://github.com/MetaMask/metamask-mobile/actions/workflows/update-latest-build-version.yml/badge.svg)](https://github.com/MetaMask/metamask-mobile/actions/workflows/update-latest-build-version.yml)
+
+<img src="https://img.shields.io/crates/v/homestar-wasm?label=crates" alt="Crate">
+<img src="https://codecov.io/gh/ipvm-wg/homestar/branch/main/graph/badge.svg?token=SOMETOKEN" alt="Code Coverage"/
+
+
+
 Tronestix AGI __coral/xyz__ Vercel.com
 path: 
           - cmd: cd tests/declare-id && anchor test --skip-lint && npx tsc --noEmit
