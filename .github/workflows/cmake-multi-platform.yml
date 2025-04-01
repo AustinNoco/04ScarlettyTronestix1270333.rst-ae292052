@@ -4,13 +4,13 @@ name: CMake on multiple platforms
 
 on:
   push:
-    branches: [ "GnosisP.sys" ]
+    branches: [ "labels" ]
   pull_request:
-    branches: [ "BusyNFTdao" ]
+    branches: [ "labels" ]
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ github.workspace }}
 
     strategy:
       # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
