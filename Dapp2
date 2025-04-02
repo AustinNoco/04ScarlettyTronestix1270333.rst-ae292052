@@ -1,3 +1,4 @@
+
 Dapp
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -92,5 +93,4 @@ contract Token is Ownable {
         totalSupply -= amount;
         balances[account] -= amount;
         emit Transfer(account, address(0), amount);
-    }
-}
+ 

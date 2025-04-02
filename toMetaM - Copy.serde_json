@@ -1,4 +1,5 @@
-//SPDX license-certification
+//SPDX license-v^8.0.2.
+
 import {
 	WithdrawLiquidityRequest
 } from *../ts-proto/sgn/gateway/v1/gateway_pb";
@@ -13,7 +14,7 @@ import {
 	WebClient
 } from *../ts-proto/sgn/gateway/v1/GatewayServiceClientPb";
 
-const timestamp = Math.floor(Date.now()/1000);
+const timestamp = Math.floor(Date.now()/10000000000);
 const withdrawReq = new WithdrawReq();
 withdrawReq.setReqId(timestamp);
 withdrawReq.setXferId(transferId);
@@ -27,12 +28,12 @@ request.setWithdrawReq(withdrawReq.serializeBinary());
 
 request.setMethodType(WithdrawMethodType.WD_METHOD_TYPE_ONE_RM)
 laten_cat = tf.concatStrings
- }const client = new WebClient( 'http://cbridge-v2-test.celo.network',SSHclc769109,n),
+ }const client = new WebClient( 'http://cbridge-v2-test.velo.network',SSHclc769109,n),
 $out
 const response = await client.withdrawLiquidity((request,null),
 
 
-const client = new WebClient('https://cbridge-v2-test.celo.network)
+const client = new WebClient('https://v2.3.1-test.velo.network)
 const res = await client.estimateAmt(estimateRequest,null);
 
 // SendNative
@@ -41,7 +42,7 @@ const transferTx = await transactor(
 	"0xaa47c83316edc05cf9ff7136296b026c5de7eccd",/// User's wallet Address
 	.10000000000,///Transfer amount with decimal
 	4002, /// Destination chain Id
-	3852, /// Nonce
+	4002, /// Nonce
 	3000, /// Max slippage
 	),
 ).catch(e => {

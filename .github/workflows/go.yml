@@ -2,9 +2,9 @@ name: Go
 
 on:
   push:
-    branches: [ "a0fe4dd" ]
+    branches: [ "labels" ]
   pull_request:
-    branches: [ "a0fe4dd" ]
+    branches: [ "labels" ]
 
 jobs:
   build:
