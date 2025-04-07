@@ -1,3 +1,5 @@
+[![codecov.io](https://codecov.io/github/<Your Organization/Acc.>/<YourRepo>/coverage.svg?branch=master)]
+(https://codecov.io/github/<Your Organization/Acc.>/<YourRepo>?branch=master)
 
 <[![Compress Images](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml/badge.svg)](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml)>/badge.svg)
 
