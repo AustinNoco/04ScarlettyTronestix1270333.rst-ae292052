@@ -21,8 +21,9 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
-
-                  - name: Setup Go environment
+- name: Create Pull Request
+  uses: peter-evans/create-pull-request@v7.0.8
+ - name: Setup Go environment
   uses: actions/setup-go@v3.6.0
   with:
     # The Go version to download (if necessary) and use. Supports semver spec and ranges.
