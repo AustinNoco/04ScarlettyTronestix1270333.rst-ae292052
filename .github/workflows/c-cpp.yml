@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: Go
+    runs-on: ollama
 
     steps:
     - uses: actions/checkout@v4
@@ -19,9 +19,8 @@ jobs:
       run: make
     - name: make check
       run: make check
-    - name: make distcheck
       run: make distcheck
-- name: Create Pull Request
+      - name: Create Pull Request
   uses: peter-evans/create-pull-request@v7.0.8
  - name: Setup Go environment
   uses: actions/setup-go@v3.6.0
