@@ -4,9 +4,9 @@ name: CMake on multiple platforms
 
 on:
   push:
-    branches: [ "GnosisB" ]
+    branches: [ "viper" ]
   pull_request:
-    branches: [ "GnosisB" ]
+    branches: [ "labels" ]
 
 jobs:
   build:
