@@ -4,9 +4,13 @@ name: CMake on multiple platforms
 
 on:
   push:
-    branches: [ "GnosisP.sys" ]
+
+    branches: [ "viper" ]
   pull_request:
-    branches: [ "Ngrok x86-64" ]
+    branches: [ "labels" ]
+
+  pull_request:
+    branches: [ "a0fe4dd" ]
 
 jobs:
   build:
