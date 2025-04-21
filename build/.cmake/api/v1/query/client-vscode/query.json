@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 AUSTIN HINOJOSAS Yash-MBP
 
+=======
+#!/bin/env
+>>>>>>> Stashed changes
 package-lock.json
 * MyCollectible - a contract for my semi-fungible tokens.
  */
