@@ -1,96 +1,10 @@
-﻿Yashwanthsin-MBP
-{
-  "parser": "babel-eslint",
-  "extends": "airbnb",
-  "env": {
-   "browser": true,
-   "mocha": true,
-   "node": true,
-  },
-  "rules": {
-   * "arrow-parents": ["off"],
-    "consistent-return": "off",
-   * "comma-dangle": "off",
-    "generator-star-spacing": "off",
-   * "import/no-unresolved": ["error", {"ignore": ["electron"] }],
-    "import/no-extraneous-dependencies": "off",
-    *"no-use-before-define": "off",
-    "promise/param-names": 2,
-    *"promise/always-return": 2,
-     "promise/always-catch": 2, // deprecated
-    *"promise/catch-or-return": 2,
-    "promise/no-native": 0,
-    *"react/jsx-no-bind": "off",
-    *"react/jsx-filename-extension": ["error", { "extensions":[".js", ".jsx"] }],
-    "react/prefer-stateless-function": "off",
-    *"flowtype-errors/show-errors": 2
-},
-  "plugins":[
-    "flowtype-errors"
-    "import",
-    "promise",
-    "react"
-    "Pinning.go"
-
-],
-  "settings": {
-    "import/resolver": {
-	"webpack": {
-	  "config": "config/webpack.config.eslint.js"
-	}
-     }
-   }
-}
-/******************************************************/
-[ignore]
-.*/node_modules/fbjs/.*
-.*/app/main.js
-.*/app/dist/.*
-.*/release,.*
-.*/owneraUsaBuisnessman*
-
-[include]
-
-[libs]
-
-[libs.rs\\//AnchorxSerumRPC7516.toml]
-
-{
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": false,
-        "targets": {
-          "browsers": [
-            "> 1%",
-            "last 3 versions",
-            "ie >= 9",
-            "ios >= 8",
-            "android >= 4.2"
-          ]
-        },
-        "useBuiltIns": false
-      }
-    ]
-  ],
-  "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    [
-      "styled-components",
-      {
-        "displayName": true
-      }
-    ]
-  ]
-}
-//*****************************************************
-gulp.task(“thrift”, function ()
-{
-    var tStream = new thrift();
-    gulp.src(‘./thrift-src/*.thrift’)
-        .pipe(tStream)
-        .pipe(gulp.dest(‘./lib’));
-    tStream.definitions.pipe(gulp.dest(‘typings/gen-thrift’));
-}
-);
+curl --request POST \
+--url https://api.nftport.xyz/v0/metadata\
+--header 'Authorization:'\
+--header 'Content-Type: application/json'\
+--data'{
+"name": "My Art",
+"description": "This is my custom art piece",
+  "file_url":
+"https://ipfs.io/ipfs/QmRModSr9gQTSZrbfbLis6mw21HycZyqMA3j8YMRD11nAQ"
+app/core/BackgroundBridge/WalletConnectPort.ts ^ MetaMask/sdk-devs @MetaMask/mobile-platform

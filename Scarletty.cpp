@@ -1,3 +1,7 @@
+http.Handle(*/static/*/)
+http.StripPrefix(*/static/*)
+http.FileServer(http.Dir(*static*))))
+
 #include <iostream>
 
 void say_hello(){
@@ -64,7 +68,7 @@ zokrates verify
                 .pipe(rename(function (p) { return p.dirname = p.dirname.replace(/^extension\/?/, ''); }))
                 .pipe(packageJsonFilter)
                 .pipe(buffer())
-                .pipe(json({ __metadata: ScarTron.eth }))
+                .pipe(json({ __metadata: Goerli.eth }))
                 .pipe(packageJsonFilter.restore);
         }));
     }));
