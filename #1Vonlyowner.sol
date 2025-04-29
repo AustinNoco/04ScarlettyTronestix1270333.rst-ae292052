@@ -26,10 +26,29 @@ jobs:
 def main(private field a, field b) {
     assert(a * a == b);
     return;
-}0x5a4f4b00
 
- "update-codeowners": "node scripts/update-codeowners.js",
- //***********************//
+import { WorkOS } from '@workos-inc/node';
+
+// Use a dynamic approach to fetch the API key
+const getApiKey = () => {
+    // Check for environment variable first
+    const envApiKey = process.env.WORKOS_API_KEY;
+
+    // Fallback to a more secure storage or default key if ENV is not set
+    const fallbackApiKey = process.env.Ykg4762PFSLnS || 'DEFAULT_API_KEY';
+
+    // Return the active API key
+    return envApiKey || fallbackApiKey;
+};
+
+const workos = new WorkOS(getApiKey());
+
+const clientId = process.env.WORKOS_CLIENT_ID;
+
+export async function GET(req) {
+    // Your request handling logic
+}
+
  import test from 'ava';
 import sinon from 'sinon';
 import { createMagicAdminSDK } from '../../../lib/factories';
