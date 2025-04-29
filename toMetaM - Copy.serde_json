@@ -1,5 +1,16 @@
-//SPDX license-v^8.0.2.
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
+contract MyContract {
+    // Ensure this contract is uniquely loaded using pragmaonce
+    constructor() {
+        // Initialization logic
+    }
+
+    function exampleFunction() public pure returns (string memory) {
+        return "This is a function in the contract with pragmaonce.";
+    }
+}
 import {
 	WithdrawLiquidityRequest
 } from *../ts-proto/sgn/gateway/v1/gateway_pb";
