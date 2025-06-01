@@ -4,6 +4,10 @@
 [![codecov.io](https://codecov.io/github/<Your Organization/Acc.>/<YourRepo>/coverage.svg?branch=master)]
 (https://codecov.io/github/<Your Organization/Acc.>/<YourRepo>?branch=master)
 
+[![latest release download count](https://img.shields.io/github/downloads/ipfs/ipfs-desktop/v0.40.0/total.svg?style=flat-square)](https://github.com/ipfs/ipfs-desktop/releases/tag/v0.40.0)
+
+**IPFS Desktop gives you all the power of [IPFS](https://ipfs.tech)
+
 <[![Compress Images](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml/badge.svg)](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml)>/badge.svg)
 
 [![Compress Images](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml/badge.svg?event=release)](https://github.com/promptfoo/promptfoo/actions/workflows/image-actions.yml)>/badge.svg)
