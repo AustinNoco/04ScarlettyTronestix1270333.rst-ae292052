@@ -1,8 +1,4 @@
 Tronestix AGI __coral/xyz__ Vercel.com
 path: 
-          - cmd: cd tests/declare-id && anchor test --skip-lint && npx tsc --noEmit
-            path: tests/declare-id
-            - cmd: cd tests/declare-program && anchor test --skip-lint && npx tsc --noEmit
-            path: tests/declare-program
-              - cmd: cd tests/typescript && anchor test --skip-lint && npx tsc --noEmit
+          ][workspace.dependencies]pyth-sdk = { path = "./pyth-sdk", version = "0.8.0" }pyth-sdk-solana = { path = "./pyth-sdk-solana", version = "0.10.4" }solana-program = ">= 1.10"borsh = "0.10.3"
           # zero-copy tests cause `/usr/bin/ld: final link failed: No space left on device`
