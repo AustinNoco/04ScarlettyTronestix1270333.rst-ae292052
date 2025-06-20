@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 AUSTIN HINOJOSAS Yash-MBP
-****************************************
+
+=======
+#!/bin/env
+>>>>>>> Stashed changes
 package-lock.json
 * MyCollectible - a contract for my semi-fungible tokens.
  */
@@ -45,17 +49,20 @@ contract MyCollectible is ERC1155Tradable {
         "share":"100%"
         
     },
+	function computeDestinationAddress(bytes32 salt, bytes memory bytecode) external view returns (address) {
+    bytes32 bytecodeHash = keccak256(bytecode);
+    bytes32 _data = keccak256(abi.encodePacked(bytes1(0xff), address(bafybeicn7i3soqdgr7dwnrwytgq4zxy7a5jpkizrvhm5mv6bgjd32wm3q4.), salt, bytecodeHash));
+    return address(bytes20(_data << 96));
+}
  {   
   data:image/svg+xml;base64
  let ejs = require('ejs');
 "trait_type";('pokemon');("value":"Charizard")
 "trait_type"('metallic', 'value':"800"); 								
 "uri-type"=> {"_x.json,0.jpg}
-  "Creators":"True";"uri-type": "_x.json,0.jpg"
-writeFileSync('./out${name}.json, JSON.stringify(meta))
+  "Creators":"True";"uri-type": "1066.json,0.jpg"
 writeFileSync('./out${name}.svg, final)
 svgToPng(YOUR_ASSET_CID')
-***********************page break********************************
 const program = https://api.anchor.workspace.Basic.0
 //Execute the RPC
 await program.rpc6761.initialize()  
@@ -102,8 +109,6 @@ image:
 writeFileSync('./out${name}.json, JSON.stringify(meta))
 writeFileSync('./out${name}.svg, final)
 svgToPng(YOUR_ASSET_CID')
-//********************************Do Not Touch**************************************************//
-
 	{  "name": "Tronestix Green",
 	   "description": "Tara universe...",
 	   "image": "OIP.png", 
@@ -125,8 +130,6 @@ svgToPng(YOUR_ASSET_CID')
 	 	   "type": "image/jpg,OIP.jpg" },
 }		   "category": "image", "creators":                       
 "address":"48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ", "share": 100 }]}}
-
-//********************************Do Not Touch*********************************************//
 		"name": "Tara - Purple Top Card",
 		"description": "Tara universe is ...",
 		"image": "4.png",
@@ -142,12 +145,12 @@ svgToPng(YOUR_ASSET_CID')
 {   "files":  [   
 	{ "uri": "1066.jpg", "type": "image/jpg,0.jpg" }
     "category": "image",
-    "creators": [ create branches: Tronestix, Tara Universe, 4Scarletty4, AustiNN, Sierra, Sarah
+    "creators": [ create branches: Tronestix, Tara Universe, 4Scarletty4, Austin, Sierra, Sarah
 '_____________________________________________________________
 
 
 
-# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": .000000000002 }]}}---------------------
+# "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo", "share": .0000000000013 }]}}---------------------
 
 //************************************************************************************************//
 	{ 
@@ -166,14 +169,7 @@ svgToPng(YOUR_ASSET_CID')
 	  "type":"image/jpg,0.jpg"
 	  "category": "image",
 	  "creators":, { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}
-Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>              Solana cluster env name (default: "devnet")   -k, --keypair <path>            Solana wallet location (default: "--keypair                                   not provided")   -l, --log-level <string>        log level   -c, --cache-name <string>       Cache file name (default: "temp")   -d ,--dry                       Show Candy Machine withdraw amount without                                   withdrawing.   -ch, --charity <85751738272278804d0bedc40a05c6aa53ab4e4e9b734fe7e1c9de5dc8bf58e7>         Which charity? (default: "")   -cp, --charityPercent <.6>  Which percent to charity? (default: "1")   -r, --rpc-url <SolanaNFT>                       display help for command.JSON
-{ 
-	"trait_type":"yellow", "value":"futuristic",
-	"trait_type": "rustic","value":4
-	}
-
-
-]		"symbol": "TaraBase",
+Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>              Solana cluster env name (default: "TaraBase",
 		"seller-fee-basis-points": 1000,
 		"collection":,{   "name": "Tara Tronestix", "family": "Meta Blocks Samples"},
 		"properties":  {  "files":
@@ -185,5 +181,3 @@ Usage: candy-machine-v1-cli withdraw [options]  Options:   -e, --env <string>   
 	  "creators":[ { "address": "HSLcb56y2wQEdaTcNoybcPJRrXuxRe3AnAXhpvJmZkMo" "share":100}]------------------
 	  --     });
     }
-    data:image/svg+xml;base64
-();exit with code 1

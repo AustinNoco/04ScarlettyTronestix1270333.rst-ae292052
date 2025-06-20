@@ -2,39 +2,16 @@
 (HOST) WARN  insufficient DWARF info; compile your program with `debug = 2` to enable location info
 (HOST) INFO  flashing program (44 pages / 44.00 KiB)
 (HOST) INFO  success!
+//SPDX-
 ────────────────────────────────────────────────────────────────────────────────
-integrity check done
-verify_authenticity function 
-stored signature [48, 9, 230, 175, 7, 110, 134, 143, 114, 219, 3, 55, 118, 105, 225, 101, 103, 190, 107, 229, 36, 203, 239, 74, 38, 117, 217, 207, 114, 250, 185, 127, 136, 108, 104, 146, 20, 212, 153, 202, 248, 222, 12, 61, 114, 63, 212, 162, 0, 253, 209, 14, 96, 64, 24, 218, 70, 31, 186, 205, 37, 185, 61, 40]
-ecc256_verifier_result : true 
-auth_checktrue
-integrity check done
-verify_authenticity function 
 stored signature [48, 74, 254, 60, 63, 57, 18, 81, 233, 129, 30, 155, 159, 0, 105, 68, 120, 92, 95, 68, 97, 76, 199, 21, 206, 254, 232, 66, 218, 192, 77, 38, 155, 185, 118, 254, 15, 134, 52, 59, 237, 101, 117, 126, 221, 46, 160, 246, 154, 129, 172, 219, 221, 193, 189, 153, 97, 79, 228, 84, 246, 125, 13, 50]
 ecc256_verifier_result : true 
 auth_checktrue
 *******************************
 AUSTINN tangleaustin78@gmail.com Sarah Plain(0)Texas
 *********************************************************************
-pub struct Metadata {
-    pub key: Key,
-    pub update_authority: Pubkey,
-    pub mint: Pubkey,
-    pub data: Data,
-    // Immutable, once flipped, all sales of this metadata are considered secondary.
-    pub primary_sale_happened: bool,
-    // Whether or not the data struct is mutable, default is not
-    pub is_mutable: bool,
-    /// nonce for easy calculation of editions, if present
-    pub edition_nonce: Option<u8>,
-    /// Since we cannot easily change Metadata, we add the new DataV2 fields here at the end.
-    pub token_standard: Option<TokenStandard>,
-    /// Collection
-    pub collection: Option<Collection>,
-    /// Uses
-    pub uses: Option<Uses>,
-    /// Item Details
-    pub collection_details: CollectionDetails,
+//SPDX-License-MIT
+pragma solidity ^0.8.0
 }
 pub enum CollectionDetails {
     None,
@@ -110,7 +87,7 @@ image:
 [{
         "name": "Charizard 35",
         "description": "Level 35 Gold-Plated Pokemon Card"
-        "image": "IMG_20220811_223040219.json"
+        "image": "Charizard35.ffjpeg"
     },
 [   {
         "trait_type": "China",
@@ -194,17 +171,17 @@ const port = process.env.PORT || 3000;
 images
     curlimages/curl
 [   {
-        "name": " Tronestix#4",
+        "name": " Dathomir",
         "description":"Scarlett quadrant is go for red...",
-        "image": "1066.jpg,0.json";
+        "image": "AangCoolNFT.jpg,0.json";
         {"attributes"}{"trait_type":"flesh:}
     },:"{faction","lung_tongue"}{"color-value","GreenBlue"}		
 [   {
         "trait_type": "position","value":"bottom"
         "symbol":"TronestixPurpleBottom",
         "seller_fee_basis_points": "500";
-        "collection-name":"Baby98"
-        {"family"}{"Meta Blocks Samples}
+        "collection-name":"Solana"
+        {"family"}{"Magic Eden}
     },:"{Properties}{"Art"}
 [   {
      let ejs = require('ejs');
@@ -234,17 +211,17 @@ image
     curlimages/curl:
 [   {
         "color_value": "cyan",
-        "trait_type": "rustic",
-        "trait_type": "pinkscarf";
+        "trait_type": "gold",
+        "trait_type": "dust";
         "value":
         "500"
     },    
 [   {
-        "symbol": "Reptilian",
+        "symbol": "Planet",
         "collection": "CandyMachineV2 _fungible",
-        "family": "Meta Blocks Samples";
-        "properties":"openzeppelin"
-        "files": "pt34nn.jpg": "x.jpg"
+        "family": "Solanaawesome";
+        "properties":"opensea nft"
+        "files": "ffjpeg.jpg": "x.jpg"
         "category": "Solana"
         "Creators":"True"
         "share":"100%"
@@ -254,9 +231,9 @@ image
  let ejs = require('ejs');
 "trait_type";('planets');("value":"futuristic")
 "trait_type"('rustic', 'value':"105\324"); 								
-"uri-type"=> {"juOy0.png,0.jpg}
+"uri-type"=> {"juOy0.png,1.jpg}
   "Creators":"True";"uri-type": "x.jpg,0.jpg"
-"token0Address""https://ipfs:/0xc778417E063141139Fce010982780140Aa0cD5A1"
+"BAYCAddress""https://ipfs:/0xc778417E063141139Fce010982780140Aa0cD5A1"
 		
  
 //*********************************************************//
@@ -267,21 +244,21 @@ const port = process.env.PORT || 3000;
 images
     curlimages/curl
 [   {
-        "name": " Tronestix#7",
-        "description":"Set cat third eye laser...",
-        "image": "Screenshot_20220413-1256711.jpg,0.json";
+        "name": " BAYC",
+        "description":"paradise above a valley",
+        "image": "AangCoolNFT.jpg,0.json";
         {"attributes"}{"trait_type":"flesh:}
     },:"{faction","lung_tongue"}{"color-value","GreenGrey"}		
 [   {
         "trait_type": "position","value":"bottom"
         "symbol":"Third eye laser",
         "seller_fee_basis_points": "500";
-        "collection-name":"Baby98"
+        "collection-name":"ERC721"
         {"family"}{"Meta Blocks Samples}
     },:"{Properties}{"Art"}
 [   {
      let ejs = require('ejs');
-     "uri-type";"Screenshot_20220413-1256711.jpg,x.jpg"
+     "uri-type";"AangCoolNFT.jpg,x.jpg"
         "Creators":"True,False",
         "address": "48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ";
         "share":"94%"
@@ -544,7 +521,7 @@ function afterAgreementTerminated(
             token1: token1
         });
     }
-    /// @notice Calls the mint function defined in periphery, mints the same amount of each token. For this example we are providing 1000 DAI and 1000 USDC in liquidity
+    /// @notice Calls the mint function defined in periphery, mints the same amount of each token. For this example we are providing 1000 USDC and 1 ETH in liquidity
     /// @return tokenId The id of the newly minted ERC721
     /// @return liquidity The amount of liquidity for the position
     /// @return amount0 The amount of token0
@@ -619,7 +596,7 @@ request.RequestUri = new Uri("https://whentoken.io/project/superfluid/");
 request.Method = HttpMethod.Get;
 
 request.Headers.Add("Accept", "*/*");
-request.Headers.Add("User-Agent", "Thunder Client (https://www.thunderclient.com)");
+request.Headers.Add("User-Agent", "Thunder Client (https://www.dappradar.com)");
 
 var response = await client.SendAsync(request);
 var result = await response.Content.ReadAsStringAsync();
