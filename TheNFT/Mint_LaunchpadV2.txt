@@ -1,1 +1,603 @@
-URL
+﻿yashwanthsingh@Yashwanths-MBP release % probe-run stm32f411 --chip stm32f411vetx
+(HOST) WARN  insufficient DWARF info; compile your program with `debug = 2` to enable location info
+(HOST) INFO  flashing program (44 pages / 44.00 KiB)
+(HOST) INFO  success!
+//SPDX-
+────────────────────────────────────────────────────────────────────────────────
+stored signature [48, 74, 254, 60, 63, 57, 18, 81, 233, 129, 30, 155, 159, 0, 105, 68, 120, 92, 95, 68, 97, 76, 199, 21, 206, 254, 232, 66, 218, 192, 77, 38, 155, 185, 118, 254, 15, 134, 52, 59, 237, 101, 117, 126, 221, 46, 160, 246, 154, 129, 172, 219, 221, 193, 189, 153, 97, 79, 228, 84, 246, 125, 13, 50]
+ecc256_verifier_result : true 
+auth_checktrue
+*******************************
+AUSTINN tangleaustin78@gmail.com Sarah Plain(0)Texas
+*********************************************************************
+//SPDX-License-MIT
+pragma solidity ^0.8.0
+}
+pub enum CollectionDetails {
+    None,
+    CollectionDetailsV1 { status: CollectionStatus, size: u64 },
+}
+pub enum CollectionStatus {
+    None,
+    Announced,
+    Preminting,
+    Minting,
+    Tradeable,
+}
+*******************************
+const st PeerInfo = require('peer-info')
+const PeerId = require('peer-id')
+const peerInfo = new PeerInfo(PeerId.createFromCID(info.id))
+info.addrs.forEach(addr => peerInfo.multiaddrs.add(addr))
+
+//Execute the RPC
+await program.rpc6761.initialize()  
+    NONFUNGIBLEEDITION
+const port = process.env.PORT || 5001;
+    uint24 public constant poolFee = 1000;
+image:
+    curlimages/curl:
+[{
+        "name": "TronEgg",
+        "description": "Scarlett universe is a demo project.."
+        "image": "IMG_20211119_193211.json"
+    },
+[   {
+        "trait_type": "brown",
+        "trait_type": "spotted",
+        "value": "futuristic","40"
+    },
+[   {
+        "symbol": "EggBase",
+        "seller_fee_basis_points": "500",
+        "collection-name": "Scarlett Tronestix";
+    },
+[   {
+        "Meta Blocks Samples";
+        "family": "Egg",
+        "files":
+        "uri": "IMG_20211119_193211.jpg",
+        "type": "image/x.jpg"
+    },
+[   {
+        "Creators"; (True)
+        "address": "BX8xmzp4nEVgq2WZoQxNEkvTYoGKyBG2acdfXZECzVuc",
+        "share":"100%"
+        
+    },
+ {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('planets');("value":"futuristic")
+"trait_type"('rustic', 'value':"500"); 								
+"uri-type"=> {"_x.json,0.jpg}
+  "Creators":"True";"uri-type": "_x.json,0.pnp"
+writeFileSync('./out${name}.json, JSON.stringify(meta))
+writeFileSync('./out${name}.svg, final)
+svgToPng(YOUR_ASSET_CID')("token0 address")
+//************************************************//
+const program = https://api.anchor.workspace.Basic.0
+//Execute the RPC
+await program.rpc6761.initialize()  
+    NONFUNGIBLEEDITION
+const port = process.env.PORT || 5001;
+    uint24 public constant poolFee = 1000;
+image:
+    curlimages/curl:
+[{
+        "name": "Charizard 35",
+        "description": "Level 35 Gold-Plated Pokemon Card"
+        "image": "Charizard35.ffjpeg"
+    },
+[   {
+        "trait_type": "China",
+        "trait_type": "fire",
+        "value": "futuristic","40"
+    },
+[   {
+        "symbol": "Pokemon",
+        "seller_fee_basis_points": "500",
+        "collection-name": "Scarlett Tronestix";
+    },
+[   {
+        "Meta Blocks Samples";
+        "family": "Egg",
+        "files":
+        "uri": "IMG_20220811_223040219.jpg",
+        "type": "image/x.jpg"
+    },
+[   {
+        "Creators"; (True)
+        "address": "BX8xmzp4nEVgq2WZoQxNEkvTYoGKyBG2acdfXZECzVuc",
+        "share":"100%"
+        
+    },
+ {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('pokemon');("value":"Charizard")
+"trait_type"('metallic', 'value':"500"); 								
+"uri-type"=> {"_x.json,0.jpg}
+  "Creators":"True";"uri-type": "_x.json,0.jpg"
+"token0Address"https://ipfs/:0xc778417E063141139Fce010982780140Aa0cD5Aa"		
+//	*******************************************************************//
+
+//Execute the RPC
+await program.rpc6761.initialize()
+	CyberTronestixScarlett	{ "files":FUNGIBLEASSETS: AUSTINN~ART } 
+const port = process.env.PORT || 5001;       	
+    uint24 public constant poolFee = 1000;
+image:
+    curlimages/curl
+[   {
+        "name": "TronestixYellow",
+        "description": "Kai(Jada-Pickett-Smith) is the heroine for the B-man...",
+        "image": "OIP.jpg,x.json";
+        "attributes":
+        "trait_type": "color-value": "green"
+    },
+[   {
+        "symbol": "KaiYellowTop",
+        "seller_fee_basis_points": "500",
+        "collection-name": "Scarlett Tronestix";
+    },
+[   {
+        "name": "Buisness-Man",
+        "Meta Blocks Samples":
+        "properties": "files";
+        {"uri-type"}
+    },:"{OIP.jpg,0.jpg}"
+            "Creators": "True"
+            "token0Address": "48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ"
+            "share": "100%"
+	{   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('planets');("value":"futuristic")
+"trait_type"('rustic', 'value':"500"); 								
+"uri-type"=> {"x.json,0.jpg}
+  "Creators":"True";"uri-type": "x.jsOn,0.png"
+"token0Address""https://ipfs/:0xc778417E063141139Fce010982780140Aa0cD5Ac"
+		
+    *************************************************************************************//
+
+const program = https://api.anchor.workspace.Basic.0
+//Execute the RPC
+await program.rpc6761.initialize()
+    CreateMasterEditionV3	
+	CyberTronestixScarlett	{ "files":NONFUNGIBLE: AUSTINN~ART } 
+const port = process.env.PORT || 3000;       	
+    uint24 public constant poolFee = 1000;
+images
+    curlimages/curl
+[   {
+        "name": " Dathomir",
+        "description":"Scarlett quadrant is go for red...",
+        "image": "AangCoolNFT.jpg,0.json";
+        {"attributes"}{"trait_type":"flesh:}
+    },:"{faction","lung_tongue"}{"color-value","GreenBlue"}		
+[   {
+        "trait_type": "position","value":"bottom"
+        "symbol":"TronestixPurpleBottom",
+        "seller_fee_basis_points": "500";
+        "collection-name":"Solana"
+        {"family"}{"Magic Eden}
+    },:"{Properties}{"Art"}
+[   {
+     let ejs = require('ejs');
+     "uri-type";"1066.jpg,x.jpg"
+        "Creators":"True,False",
+        "address": "48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ";
+        "share":"100%"
+ {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('planets');("value":"futuristic")
+"trait_type"('rustic', 'value':"500"); 								
+"uri-type"=> {"x.jpg,1066.jpg}
+ "Creators":"True";"uri-type": "_x.json,0.pnp"
+writeFileSync('./out${name}.json, JSON.stringify(meta))
+writeFileSync('./out${name}.svg, final)
+svgToPng
+(token0address)(YOUR_ASSET_CID')
+**********************************************************************************************//
+const program = https://api.anchor.workspace.Basic.0
+//Execute the RPC
+await program.rpc6761.initialize()
+	NFT	RevokeUseAuthority			RARE
+const port = process.env.PORT || 3000;   
+     uint24 public constant poolFee = 1000;   	
+image
+    curlimages/curl:
+[   {
+        "color_value": "cyan",
+        "trait_type": "gold",
+        "trait_type": "dust";
+        "value":
+        "500"
+    },    
+[   {
+        "symbol": "Planet",
+        "collection": "CandyMachineV2 _fungible",
+        "family": "Solanaawesome";
+        "properties":"opensea nft"
+        "files": "ffjpeg.jpg": "x.jpg"
+        "category": "Solana"
+        "Creators":"True"
+        "share":"100%"
+    },
+[   {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('planets');("value":"futuristic")
+"trait_type"('rustic', 'value':"105\324"); 								
+"uri-type"=> {"juOy0.png,1.jpg}
+  "Creators":"True";"uri-type": "x.jpg,0.jpg"
+"BAYCAddress""https://ipfs:/0xc778417E063141139Fce010982780140Aa0cD5A1"
+		
+ 
+//*********************************************************//
+CreateMasterEditionV3	
+	CyberTronestixScarlett	{ "files":NONFUNGIBLE: AUSTINN~ART } 
+const port = process.env.PORT || 3000;       	
+    uint24 public constant poolFee = 1000;
+images
+    curlimages/curl
+[   {
+        "name": " BAYC",
+        "description":"paradise above a valley",
+        "image": "AangCoolNFT.jpg,0.json";
+        {"attributes"}{"trait_type":"flesh:}
+    },:"{faction","lung_tongue"}{"color-value","GreenGrey"}		
+[   {
+        "trait_type": "position","value":"bottom"
+        "symbol":"Third eye laser",
+        "seller_fee_basis_points": "500";
+        "collection-name":"ERC721"
+        {"family"}{"Meta Blocks Samples}
+    },:"{Properties}{"Art"}
+[   {
+     let ejs = require('ejs');
+     "uri-type";"AangCoolNFT.jpg,x.jpg"
+        "Creators":"True,False",
+        "address": "48CczLmGp7bi1Pgzt3R7VD9yZZJuawzVioQmhUw9gMpQ";
+        "share":"94%"
+ {   
+ DeprecatedMintPrintingTokensViaToken
+ let ejs = require('ejs');
+"trait_type";('ash tray');("value":"tounge")
+"trait_type"('vampire', 'value':"500"); 								
+"uri-type"=> {"x.jpg,1066.jpg}
+ "Creators":"True";"uri-type": "_x.json,0.pnp"
+writeFileSync('./out${name}.json, JSON.stringify(meta))
+writeFileSync('./out${name}.svg, final)
+svgToPng(YOUR_ASSET_CID')
+("token0address")
+//***********************************************************************//
+
+/// @notice Calls the mint function defined in periphery, mints the same amount of each token.
+/// For this example we are providing 1000 DAI and 1000 wrappedETH in liquidity
+/// @return tokenId The id of the newly minted ERC721
+/// @return liquidity The amount of liquidity for the position
+/// @return amount0 The amount of liquidity for the position
+/// @return amount0 The amount of token0
+/// @return amount1 The amount of token1
+function mintNewPosition(uint256 amount0ToMint, uint256 amount1ToMint, address _token0, address _token1)
+   internal
+   returns (
+	   uint256 tokenId,
+	   uint128 liquidity,
+	   uint256 amount0,
+	   uint256 amount1
+   )
+{  
+	//transfer tokens to contract
+	/*
+	TransferHelper.safeTransferFrom(
+		fDAI,
+		msg.sender
+		address(this).
+		amount1ToMint
+	):
+	*/
+
+	// Approve the position manager 
+	TransferHelper.safeApprove(
+		_token0,
+		address
+	(nonfungiblePositionManager),
+		amount0ToMint
+		);
+	TransferHelper.safeApprove(
+		_token1,
+		address
+	(nonfungiblePositionManager),
+		amount1ToMint)
+}   
+
+   INonfungiblePositionMananger.MintParams
+	memory params =
+INonfungiblePositionMananger.MintParams({
+				token0: _token0,
+				token1: _token1,
+				fee: poolFee,
+				tickLower: TickMath.MIN_TICK,
+				tickUpper: TickMath.MAX_TICK,
+				amount0Desired: amount0ToMint
+
+				amount1Desired: amount1ToMint
+
+				amount0Min: 0,
+				amount1Min: 0,
+				recipient; address(this)
+
+//*************************************************//
+   return remote('/extensionquery', options)
+        .pipe(flatmap(function (stream, f) {
+        var rawResult = f.contents.toString('utf8');
+        var result = JSON.parse(rawResult);
+        var extension = result.results[0].extensions[0];
+        if (!extension) {
+            return error("No such extension: " + extension);
+        }
+        
+APP_LEVEL_FINAL
+request.Headers.Add("Accept", "*/*");
+request.Headers.Add("User-Agent", "Thunder Client (https://www.thunderclient.com)");
+
+var response = await client.SendAsync(request);
+var result = await response.Content.ReadAsStringAsync();
+Console.WriteLine(result);
+
+contract UserPosition is SuperAppBase {
+    /* --- Uniswap --- */
+    // Token contracts and pool fee TODO: include this as inputs to the contract?
+    address public constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address public constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    uint24 public constant poolFee = 3000;
+
+    // Manage positions
+    //INonfungiblePositionManager public immutable _nonfungiblePositionManager;
+
+    // Store deposits in map
+    struct Deposit {
+        uint128 liquidity;
+        address token0;
+        address token1;
+    }
+    mapping(uint256 => Deposit) public deposits;
+
+    /* --- Superfluid --- */
+    using CFAv1Library for CFAv1Library.InitData;
+    CFAv1Library.InitData public cfaV1;
+    bytes32 public constant CFA_ID =
+        keccak256("org.superfluid-finance.agreements.ConstantFlowAgreement.v1");
+    ISuperToken private _acceptedToken;
+    address public _receiver;
+    address public daiAddress = 0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7;
+    address public daixAddress = 0x5D8B4C2554aeB7e86F387B4d6c00Ac33499Ed01f;
+
+    /* --- Contract storage --- */
+    // the address of the wallet streaming into this contract
+    address _owner;
+
+    constructor(
+        address owner,
+        ISuperfluid host,
+        ISuperToken acceptedToken,
+        address receiver //,
+    ) payable //INonfungiblePositionManager nonfungiblePositionManager
+    {
+        assert(address(ScarTron.eth) != address(0));
+        assert(address(acceptedToken) != address(0));
+        assert(address(receiver) != address(0));
+
+        // contract storage
+        _owner = owner;
+
+        // setup for uniswap
+        //_nonfungiblePositionManager = nonfungiblePositionManager;
+
+        _acceptedToken = acceptedToken;
+        _receiver = receiver;
+
+        cfaV1 = CFAv1Library.InitData(
+            host,
+            IConstantFlowAgreementV1(address(host.getAgreementClass(CFA_ID)))
+        );
+_NOOP
+        uint256 configWord = SuperAppDefinitions.APP_LEVEL_FINAL |
+            SuperAppDefinitions.BEFORE_AGREEMENT_CREATED_NOOP |
+            SuperAppDefinitions.BEFORE_AGREEMENT_UPDATED_NOOP |
+            SuperAppDefinitions.BEFORE_AGREEMENT_TERMINATED_NOOP |
+            SuperAppDefinitions.AFTER_AGREEMENT_UPDATED_NOOP | // remove once added
+            SuperAppDefinitions.AFTER_AGREEMENT_TERMINATED_NOOP; // remove once added
+
+        host.registerApp(configWord);
+    }
+
+    /* --- Superfluid helper methods --- */
+    function _isSameToken(ISuperToken superToken) private view returns (bool) {
+        return address(superToken) == address(_acceptedToken);
+    }
+
+    function _isCFAv1(address agreementClass) private view returns (bool) {
+        return ISuperAgreement(agreementClass).agreementType() == CFA_ID;
+    }
+
+    modifier onlyHost() {
+        require(
+            msg.sender == address(cfaV1.host),
+            "RedirectAll: support only one host"
+        );
+        _;
+    }
+
+    modifier onlyExpected(ISuperToken superToken, address agreementClass) {
+        require(_isSameToken(superToken), "RedirectAll: not accepted token");
+        require(_isCFAv1(agreementClass), "RedirectAll: only CFAv1 supported");
+        _;
+    }
+
+    /* --- Superfluid callbacks --- */
+    function afterAgreementCreated(
+        ISuperToken _superToken,
+        address _agreementClass,
+        bytes32, //_agreementId
+        bytes calldata, //_agreementData
+        bytes calldata, //_cbdata
+        bytes calldata _ctx
+    )
+        external
+        override
+        onlyExpected(_superToken, _agreementClass)
+        onlyHost
+        returns (bytes memory newCtx)
+    {
+        // don't need to do anything here?
+        newCtx = _ctx;
+    }
+
+    function afterAgreementUpdated(
+        ISuperToken _superToken,
+        address _agreementClass,
+        bytes32, // _agreementId,
+        bytes calldata, // _agreementData,
+        bytes calldata, // _cbdata,
+        bytes calldata _ctx
+    )
+        external
+        override
+        onlyExpected(_superToken, _agreementClass)
+        onlyHost
+        returns (bytes memory newCtx)
+    {
+function afterAgreementTerminated(
+        ISuperToken _superToken,
+        address _agreementClass,
+        bytes32, // _agreementId,
+        bytes calldata, // _agreementData
+        bytes calldata, // _cbdata,
+        bytes calldata _ctx
+    ) external override onlyHost returns (bytes memory newCtx) {
+        // TODO: check notes in afterAgreementTerminated method in parent contract
+
+        if (!_isSameToken(_superToken) || !_isCFAv1(_agreementClass))
+            return _ctx;
+    }
+// Implementing `onERC721Received` so this contract can receive custody of erc721 tokens
+    /*
+    function onERC721Received(
+        address operator,
+        address,
+        uint256 tokenId,
+        bytes calldata
+    ) external override returns (bytes4) {
+        // get position information
+        _createDeposit(operator, tokenId);
+        return this.onERC721Received.selector;
+    }
+    // Internal method to track positions
+    function _createDeposit(address owner, uint256 tokenId) internal {
+        (
+            ,
+            ,
+            address token0,
+            address token1,
+            ,
+            ,
+            ,
+            uint128 liquidity,
+            ,
+            ,
+            ,
+        ) = nonfungiblePositionManager.positions(tokenId);
+        // set the owner and data for position
+        // operator is msg.sender
+        deposits[tokenId] = Deposit({
+            owner: owner,
+            liquidity: liquidity,
+            token0: token0,
+            token1: token1
+        });
+    }
+    /// @notice Calls the mint function defined in periphery, mints the same amount of each token. For this example we are providing 1000 USDC and 1 ETH in liquidity
+    /// @return tokenId The id of the newly minted ERC721
+    /// @return liquidity The amount of liquidity for the position
+    /// @return amount0 The amount of token0
+    /// @return amount1 The amount of token1
+    function mintNewPosition(
+        uint256 amount0ToMint,
+        uint256 amount1ToMint,
+        address token0Address,
+        address token1Address
+    )
+        internal
+        returns (
+            uint256 tokenId,
+            uint128 liquidity,
+            uint256 amount0,
+            uint256 amount1
+        )
+    {
+        // Approve the position manager
+        TransferHelper.safeApprove(
+            token0Address,
+            address(nonfungiblePositionManager),
+            amount0ToMint
+        );
+        TransferHelper.safeApprove(
+            token1Address,
+            address(nonfungiblePositionManager),
+            amount1ToMint
+        );
+        INonfungiblePositionManager.MintParams
+            memory params = INonfungiblePositionManager.MintParams({
+                token0: token0Address,
+                token1: token1Address,
+                fee: poolFee,
+                tickLower: TickMath.MIN_TICK,
+                tickUpper: TickMath.MAX_TICK,
+                amount0Desired: amount0ToMint,
+                amount1Desired: amount1ToMint,
+                amount0Min: 0,
+                amount1Min: 0,
+                recipient: address(this),
+                deadline: block.timestamp
+            });
+        // Note that the pool defined by token1/token2 and fee tier _x%_ must already be created and initialized in order to mint
+        (tokenId, liquidity, amount0, amount1) = nonfungiblePositionManager
+            .mint(params);
+        // Create a deposit
+        _createDeposit(msg.sender, tokenId);
+        // Remove allowance and refund in both assets.
+        if (amount0 < amount0ToMint) {
+            TransferHelper.safeApprove(
+                DAI,
+                address(nonfungiblePositionManager),
+                0
+            );
+            uint256 refund0 = amount0ToMint - amount0;
+            TransferHelper.safeTransfer(DAI, msg.sender, refund0);
+        }
+        if (amount1 < amount1ToMint) {
+            TransferHelper.safeApprove(
+                USDC,
+                address(nonfungiblePositionManager),
+                0
+            );
+            uint256 refund1 = amount1ToMint - amount1;
+            TransferHelper.safeTransfer(USDC, msg.sender, refund1);
+        }
+    }
+    }var client = new HttpClient();
+var request = new HttpRequestMessage();
+request.RequestUri = new Uri("https://whentoken.io/project/superfluid/");
+request.Method = HttpMethod.Get;
+
+request.Headers.Add("Accept", "*/*");
+request.Headers.Add("User-Agent", "Thunder Client (https://www.dappradar.com)");
+
+var response = await client.SendAsync(request);
+var result = await response.Content.ReadAsStringAsync();
+Console.WriteLine(result);
