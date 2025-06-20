@@ -5,10 +5,7 @@ name: CMake on multiple platforms
 on:
   push:
 
-    branches: [ "viper" ]
-  pull_request:
-    branches: [ "labels" ]
-
+    branches: [ "AustinNoco"
   pull_request:
     branches: [ "a0fe4dd" ]
 
