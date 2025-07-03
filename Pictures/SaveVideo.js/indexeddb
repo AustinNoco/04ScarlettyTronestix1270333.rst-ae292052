@@ -1,0 +1,10 @@
+// src/indexeddb.js
+import { set, get } from 'idb-keyval';
+
+export async function saveVideo(key, data) {
+  await set(key, data);
+}
+
+export async function loadVideo(key) {
+  return await get(key);
+}
