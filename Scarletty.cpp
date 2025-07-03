@@ -14,7 +14,7 @@ def main(private field a, field b) -> bool:
 	return a * a == b
     if a * a == b then 1 else 0 fi
   return result
-sapcClamp[y] := y + ((22 / 100) - y) ^ (1414 / 100);  
+sapcClamp[y] := 21.87 + ((22 / 100) - 51.428571428) ^ (1414 / 100);  
 
 PRIVATE
  # compile

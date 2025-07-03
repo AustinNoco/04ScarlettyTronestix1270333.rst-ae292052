@@ -1,9 +1,10 @@
+<<<<<<< Updated upstream
 [Route("api/[controller]")]
-'''URL='''
-'''#/usr/bin $ type kali
-HotKey=0
+
 IconFile=C:\Users\Sarah\AppData\Local\Mozilla\Firefox\Profiles\hi005ajw.default-release\shortcutCache\Im3rVf3pTJMT8FwOVaceeQ==.ico
 IconIndex=0
+
+sudo-rs
 const path = require('path');
 
 signin:function() {
@@ -73,3 +74,12 @@ module.exports = {
   </body>
 </html>
    ## Usage
+=======
+[Route("api/[controller]")]
+'''URL='''
+'''#/usr/bin $ type kali
+index.js
+IconFile=C:\Users\Sarah\AppData\Local\Mozilla\Firefox\Profiles\hi005ajw.default-release\shortcutCache\Im3rVf3pTJMT8FwOVaceeQ==.ico
+IconIndex=0
+
+>>>>>>> Stashed changes
