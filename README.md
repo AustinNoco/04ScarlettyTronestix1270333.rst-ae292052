@@ -1,3 +1,5 @@
+[![Python CI](https://github.com/safe-global/safe-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/safe-global/safe-cli/actions/workflows/ci.yml)
+
 ![npm](https://img.shields.io/npm/v/@workos-inc/node)
 [![Build Status](https://workos.semaphoreci.com/badges/workos-node/branches/main.svg?style=shields)](https://workos.semaphoreci.com/projects/workos-node)
 
