@@ -1,0 +1,17 @@
+const LendingPoolAddressesProviderInstance = new web3.eth.Contract(LendingPoolAddressesProvider.abi, '0x9C6C63aA0cD4557d7aE6D9306C06C093A2e35408');
+const lendingPool = await LendingPoolAddressesProviderInstance.methods.getLendingPool().call();
+
+const LendingPoolInstance = new web3.eth.Contract(LendingPool.abi, lendingPool);
+
+var receiverContract = '0xb544f44905dBc94e096576898debAD22b6A2F3C1';    // Address of your deployed contract from step 2.
+var reserveAddr = '0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD';         // This is the DAI address and it is confirmed as working
+var loanAmountWei = web3.utils.toWei('0.001', 'ether');
+
+const reserveData = await LendingPoolInstance.methods.getReserveData(reserveAddr).call();
+console.log('Reserve Data: ');
+console.log(reserveData);                                             // This shows how much reserve funds are available
+
+const tx =  LendingPoolInstance.methods.flashLoan(receiverContract, reserveAddr, loanAmountWei); // Actual flashLoan call with your contract as the receiver.
+console.log('Sending tx');
+var rx = await Util.sendTransaction(web3, tx, TRADER_ACCOUNT_ADDR, process.env.PRIVATEKEY, lendingPool);
+console.log(rx)
