@@ -165,14 +165,14 @@ const program = https://api.anchor.workspace.Basic.0
 //Execute the RPC
 await program.rpc6761.initialize()
     CreateMasterEditionV3	
-	CyberTronestixScarlett	{ "files":NONFUNGIBLE: AUSTINN~ART } 
+	TronecityBaa	{ "files":NONFUNGIBLE: AUSTINN~ART } 
 const port = process.env.PORT || 3000;       	
     uint24 public constant poolFee = 1000;
 images
     curlimages/curl
 [   {
         "name": " Dathomir",
-        "description":"Scarlett quadrant is go for red...",
+        "description":"BlueFlame gaussian hologram copier...",
         "image": "AangCoolNFT.jpg,0.json";
         {"attributes"}{"trait_type":"flesh:}
     },:"{faction","lung_tongue"}{"color-value","GreenBlue"}		
