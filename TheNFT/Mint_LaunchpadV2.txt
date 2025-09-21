@@ -1,5 +1,5 @@
-﻿yashwanthsingh@Yashwanths-MBP release % probe-run stm32f411 --chip stm32f411vetx
-(HOST) WARN  insufficient DWARF info; compile your program with `debug = 2` to enable location info
+
+(HOST) '''www/share
 (HOST) INFO  flashing program (44 pages / 44.00 KiB)
 (HOST) INFO  success!
 //SPDX-
