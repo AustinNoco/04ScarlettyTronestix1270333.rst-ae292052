@@ -1,12 +1,12 @@
  Basic checks
 
-on:
+Runs on: Ubuntu-Latest
   push:
     branches:
-      - main
+      - labels
   pull_request:
     branches:
-      - main
+      - labels
 
 jobs:
   main:
